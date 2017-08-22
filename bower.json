@@ -1,0 +1,28 @@
+{
+  "name": "Markup",
+  "description": "Stub for HTML project",
+  "main": "",
+  "authors": [
+    "[object Object]"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "fotorama": "^4.6.4",
+    "slick-carousel": "^1.6.0",
+    "jcf": "^1.2.3",
+    "magnific-popup": "^1.1.0",
+    "simplestatemanager": "ssm#^3.1.3"
+  },
+  "devDependencies": {
+    "background-check": "^1.2.2"
+  }
+}

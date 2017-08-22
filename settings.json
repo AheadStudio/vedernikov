@@ -1,0 +1,120 @@
+{
+	"info": {
+		"name": "vedernikov",
+		"code": "vedernikov",
+		"year": "2017",
+		"notes": "",
+		"productionUrl": "http://wemakesites.ru/projects/vedernikov/",
+		"siteName": "waterfall",
+		"title": "vedernikov",
+		"description": "",
+		"keywords": "",
+		"image": "/i/og.jpg"
+	},
+	"customer": {
+        "name": "Александр",
+        "company": "GoodCode",
+        "email": "akiricovich@gmail.com",
+        "removeCopyrights": false
+	},
+	"ftp": {
+		"host": "wemakesites.ru",
+		"login": "wemakesites",
+		"password": "wemakesites-root"
+	},
+	"pages": {
+		"home": {
+			"name": "Главная",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"home2": {
+			"name": "Главная2",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			}
+		},
+		"contacts": {
+			"name": "Контакты",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Главная",
+					"href": "home.html"
+				}
+			],
+			"title": "Контакты"
+		},
+		"catalog": {
+			"name": "Продукция",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Главная",
+					"href": "home.html"
+				}
+			],
+			"title": "Продукция"
+		},
+		"card": {
+			"name": "Карточка товара",
+			"progress": {
+				"desktop": "0",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Главная",
+					"href": "home.html"
+				}, {
+					"name": "Продукция",
+					"href": "catalog.html"
+				}
+			]
+		},
+		"mission": {
+			"name": "Миссия",
+			"progress": {
+				"desktop": "0",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Главная",
+					"href": "home.html"
+				}
+			],
+			"title": "Миссия"
+		},
+		"about": {
+			"name": "О компании",
+			"progress": {
+				"desktop": "0",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Главная",
+					"href": "home.html"
+				}
+			],
+			"title": "О компании"
+		}
+	}
+}

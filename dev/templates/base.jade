@@ -1,0 +1,170 @@
+include ../lib/html/html.jade
+doctype html
+html(lang="ru")
+	head
+		+headerMeta({
+			charset: "utf-8",
+			keywords: info.keywords,
+			description: info.description,
+			title: info.title,
+			robots: "index, follow",
+			viewport: "width=device-width, initial-scale=1.0"
+		})
+		+openGraph({
+			type: "website",
+			siteName: info.siteName,
+			title: info.title,
+			description: info.description,
+			url: info.productionUrl,
+			image: info.image
+		})
+		+webIcons({
+			favicon: {
+				src: "/i/favicon.ico"
+			},
+			appleTouchIcon: [
+				{
+					src: "../i/icons/apple-touch-icon.jpg"
+				}, {
+					src: "../i/icons/apple-touch-icon-76.jpg",
+					size: "76x76"
+				}, {
+					src: "../i/icons/apple-touch-icon-140.jpg",
+					size: "140x140"
+				}, {
+					src: "../i/icons/apple-touch-icon-152.jpg",
+					size: "152x152"
+				}
+			]
+		})
+		+addCSS(css)
+		+addCSS([
+			{
+				"href": "../css/" + info.code + ".css",
+				"media": "screen",
+				"type": "text/css"
+			}, {
+				"href": "../css/" + info.code + ".responsive.css",
+				"media": "screen",
+				"type": "text/css"
+			}
+		])
+
+	body(itemscope, itemtype="http://schema.org/WebPage")
+		
+		div(class="page-preloader")
+			div(class="page-preloader-logo")
+				include ../../prod/svg/logo_white.svg
+			div(class="page-preloader-spinner")
+
+		div(class="page")
+			header(class="page-header show", itemscope, itemtype="http://schema.org/WPHeader")
+				div(class="page-inner page-inner--w0")
+					a(href="home.html", class="header-logo")
+							include ../../prod/svg/logo_header.svg
+
+					div(class="header-menu-burger", title="Меню")
+						div(class="header-menu-burger-inner")
+					
+						
+
+			main(class="page-content")
+				block content
+
+		footer(class="page-footer", itemscope, itemtype="http://schema.org/WPFooter", data-animationtype="footer")
+			div(class="footer-row footer-row--info")
+				div(class="page-inner page-inner--w1")
+					+menu({
+						rootClass: "footer-menu",
+						items: [
+							{
+								name: "Терруар",
+								href: "terruar.html"
+							}, {
+								name: "О винодельне",
+								href: "about.html"
+							}, {
+								name: "Вино",
+								href: "vine.html"
+							}, {
+								name: "Новости",
+								href: "news.html"
+							}, {
+								name: "Где купить",
+								href: "where.html"
+							}, {
+								name: "Контакты",
+								href: "contacts.html"
+							}
+						]
+					})
+					
+					div(class="footer-info")
+						div(class="footer-logo") Винодельня Ведерниковъ
+						div(class="footer-contacts")
+							p Россия, Ростовская область, хутор Ведерников,
+							p
+								a(href="mailto:info@vedernikovwine.ru") info@vedernikovwine.ru
+							p
+								a(href="tel:+79284566787") +7 928 456 67 87
+								
+					div(class="footer-social")
+						div(class="footer-social-inner")
+							div(class="footer-social-title") Следуйте за нами
+							div(class="footer-social-items")
+								a(href="#", class="footer-social-item", target="_blank", title="Instagram")
+									include ../../prod/svg/inst.svg
+								a(href="#", class="footer-social-item", target="_blank", title="Facebook")
+									include ../../prod/svg/f.svg
+								a(href="#", class="footer-social-item", target="_blank", title="ВКонтакте")
+									include ../../prod/svg/vk.svg
+							
+			div(class="footer-row footer-row--black")
+				div(class="page-inner page-inner--w1")
+					div(class="footer-copyrights") &copy; 2017, Винодельня Ведерников.
+					a(href="http://aheadstudio.ru", target="_blank", class="footer-creators")
+						| Сделано в 
+						span AHEADSTUDIO
+						| .
+
+
+
+		div(class="panel")
+			div(class="panel-inner")
+				div(class="header-lang")
+					span(class="header-lang-item header-lang-item--current") Русский
+					a(href="#", class="header-lang-item") English
+				+menu({
+					rootClass: "header-menu",
+					items: [
+						{
+							name: "Терруар",
+							href: "terruar.html"
+						}, {
+							name: "О винодельне",
+							href: "about.html"
+						}, {
+							name: "Вино",
+							href: "vine.html"
+						}, {
+							name: "Новости",
+							href: "news.html"
+						}, {
+							name: "Где купить",
+							href: "where.html"
+						}, {
+							name: "Контакты",
+							href: "contacts.html"
+						}
+					]
+				})
+			div(class="panel-bg")
+
+
+
+		+addJS(js)
+		+addJS([
+			{
+				"src": "../js/" + info.code + ".js"
+			}
+		])

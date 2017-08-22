@@ -1,0 +1,12 @@
+[
+    {
+        "code": "page1",
+        "name": "Page 1",
+        "progress": {
+            "desktop": "10",
+            "tablet": "20",
+            "mobile": "30"
+        },
+        "params": {}
+    }
+]

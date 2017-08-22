@@ -1,0 +1,46 @@
+{
+    "css": [
+        {
+                "href": "../bower_components/fotorama/fotorama.css",
+                "type": "text/css",
+                "media": "screen"
+        }, {
+                "href": "../bower_components/magnific-popup/dist/magnific-popup.css",
+                "type": "text/css",
+                "media": "screen"
+        }, {
+                "href": "../bower_components/slick-carousel/slick/slick.css",
+                "type": "text/css",
+                "media": "screen"
+        }
+    ],
+    "js": [
+        {
+            "src": "../bower_components/jquery/dist/jquery.min.js"
+        }, {
+            "src": "../bower_components/fotorama/fotorama.js"
+        }, {
+            "src": "../bower_components/slick-carousel/slick/slick.min.js"
+        }, {
+            "src": "../bower_components/jcf/dist/js/jcf.js"
+        }, {
+            "src": "../bower_components/jcf/dist/js/jcf.checkbox.js"
+        }, {
+            "src": "../bower_components/jcf/dist/js/jcf.file.js"
+        }, {
+            "src": "../bower_components/jcf/dist/js/jcf.radio.js"
+        }, {
+            "src": "../bower_components/jcf/dist/js/jcf.select.js"
+        }, {
+            "src": "../bower_components/jcf/dist/js/jcf.number.js"
+        }, {
+            "src": "../bower_components/jcf/dist/js/jcf.range.js"
+        }, {
+            "src": "../bower_components/magnific-popup/dist/jquery.magnific-popup.min.js"
+        }, {
+            "src": "../bower_components/simplestatemanager/dist/ssm.min.js"
+        }, {
+            "src": "../bower_components/background-check/background-check.js"
+        }
+    ]
+}

@@ -1,0 +1,95 @@
+/*** Settings ***/
+@import "nib"
+
+global-reset();
+reset-html5();
+form-reset();
+b
+strong
+i
+em
+	font-style normal
+	font-weight normal
+/*** //Settings ***/
+
+
+/*** Base ***/
+html
+body
+	height 100%
+
+body
+	min-height 100%
+
+	line-height 1
+
+	color #000
+	cursor default
+
+.page
+	width 100%
+	min-height 100%
+	min-width 1200px
+	overflow hidden
+
+.page-inner
+	margin 0 auto
+
+	box-sizing border-box
+
+	&--relative
+		position relative
+
+	&--w0
+		max-width 1400px
+		padding 0 50px
+
+	&--w1
+		max-width 1230px
+		padding 0 30px
+
+	&--w2
+		max-width 930px
+
+	&--half
+		margin 0
+
+		width 60%
+		min-width 840px
+
+	&--cleared
+		clearfix()
+
+.page-content
+/*** //Base ***/
+
+
+/*** Content ***/
+.link
+	text-decoration none
+
+	&[href*=tel]
+	/[href*=tel]
+		text-decoration none
+		color inherit
+
+.btn
+	box-sizing border-box
+	display inline-block
+
+	text-decoration none
+	text-align center
+	line-height 1.05
+
+img
+	&.resize
+		width 100%
+		height auto
+/*** //Content ***/
+
+
+/*** Header ***/
+/*** //Header ***/
+
+/*** Footer ***/
+/*** //Footer ***/
