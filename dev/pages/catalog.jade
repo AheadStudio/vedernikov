@@ -1,0 +1,116 @@
+extends ../templates/base
+
+block content
+	div(class="intro")
+		div(class="intro-bg", style="background-image: url(../dummy/bgs/catalog.png)")
+			div(class="page-inner page-inner--w1")
+				div(class="intro-inner")
+					h1(class="intro-title") Вино
+					div(class="intro-btn-holder")
+						a(href="#", class="btn btn--white") Архив вин
+
+	div(class="catalog")
+		div(class="page-inner page-inner--w1")
+			form(class="filter", action="catalog.html")
+				label(class="filter-item filter-item--all")
+					input(type="radio", class="filter-item-field", name="f1", value="y")
+					span(class="filter-item-name") Все
+				label(class="filter-item")
+					input(type="radio", class="filter-item-field", name="f2", value="y")
+					span(class="filter-item-name") Красное
+				label(class="filter-item")
+					input(type="radio", class="filter-item-field", name="f3", value="y")
+					span(class="filter-item-name") Белое
+				label(class="filter-item")
+					input(type="radio", class="filter-item-field", name="f4", value="y")
+					span(class="filter-item-name") Розовое
+				label(class="filter-item filter-item--barrel")
+					input(type="radio", class="filter-item-field", name="f5", value="y")
+					span(class="filter-item-name") В бочках
+
+			div(class="catalog-items")
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/1.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Губернаторское Ркацители
+						div(class="catalog-item-num") 1
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/2.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Губернаторское Рислинг
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/3.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Донская чаша Ркацители
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/4.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Правобережное Алиготе
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/5.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Сибрьковый, 2013
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/6.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Красностоп Золотовский
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/7.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Првобережное 2012
+						div(class="catalog-item-num") 1
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/8.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Губернаторское Голубок
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/9.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Сибирьковый
+						div(class="catalog-item-num") 3
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/10.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Ркацители в бочках
+
+				a(href="#", class="catalog-item")
+					div(class="catalog-item-inner")
+						div(class="catalog-item-photo-holder")
+							img(src="../dummy/catalog/11.png", class="catalog-item-photo")
+						div(class="catalog-item-brand") Винодельня Ведерниковъ
+						div(class="catalog-item-name") Цимлянский черный в бочках
+
+
+
+
+
+

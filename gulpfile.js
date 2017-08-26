@@ -501,6 +501,10 @@ gulp.task("js", function() {
 // Контентная медиа
 gulp.task("dummy", function() {
 	gulp.src([settings.paths.dev.dummy + "*", settings.paths.dev.dummy + "**"])
+		.pipe(newer({
+			dest: settings.paths.prod.dummy,
+			ext: ".png"
+		}))
 		.pipe(imagemin({
 			//progressive: false
 		}))

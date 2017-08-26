@@ -9,9 +9,19 @@
 		return {
 			header: {
 				init: function() {
+					var self = this;
+
+					self.checkBg();
+				},
+
+				checkBg: function() {
+					var imagesSel = ".section-item-photo-holder, .news-item-photo, .cat-item-bg";
+					if(!$(imagesSel).length) {
+						return false;
+					}
 					BackgroundCheck.init({
 						targets: ".header-logo",
-						images: ".section-item-photo-holder, .news-item-photo, .cat-item-bg"
+						images: imagesSel
 					});
 
 					$sel.window.on("scroll", function() {

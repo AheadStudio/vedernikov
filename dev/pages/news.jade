@@ -1,0 +1,23 @@
+extends ../templates/base
+
+block content
+	h1(class="h1") Новости
+
+	div(class="news")
+		div(class="page-inner page-inner--w1")
+			div(class="news-items")
+				a(href="#", class="news-item")
+					div(class="news-item-panel", data-animationtype="slideTop")
+						div(class="news-item-date") 17 августа 2017
+						div(class="news-item-name") Высокий класс игры в исполнении «Винодельни Ведерниковъ» на «Кубке Союза виноградарей»
+						div(class="news-item-description") В начале октября, когда уборка урожая на наших виноградниках еще была в самом разгаре, в Абрау-Дюрсо был проведен ежегодный дегустационный конкурс.
+						div(class="news-item-more") далее
+					div(class="news-item-photo-holder")
+						div(class="news-item-photo", style="background-image: url(../dummy/news/1.png)", data-animationtype="zoomIn")
+
+				a(href="#", class="news-item")
+					div(class="news-item-panel", data-animationtype="slideTop")
+						div(class="news-item-date") 24 мая 2017 
+						div(class="news-item-name") Кубок СВВР в Абрау-Дюрсо: успех ведерниковского Каберне Совиньон 2015
+					div(class="news-item-photo-holder")
+						div(class="news-item-photo", style="background-image: url(../dummy/news/2.png)", data-animationtype="zoomIn")

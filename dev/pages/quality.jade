@@ -1,0 +1,57 @@
+extends ../templates/base
+
+block content
+	div(class="page-hero")
+		div(class="page-inner page-inner--w1")
+			if page.breadcrumbs
+				+breadcrumbs({
+					rootClass: "page-breadcrumbs",
+					items: page.breadcrumbs
+				})
+			h1(class="h1") Аборигенные сорта винограда: уникальное мировое достояние
+			img(src="../dummy/bgs/quality.png", class="page-hero-bg")
+
+	div(class="page-cite") В России «Винодельня Ведерниковъ» является одним из самых титулованных производителей.  
+
+	div(class="page-description")
+		div(class="page-inner page-inner--w1")
+			div(class="page-text") «Винодельня Ведерниковъ» производит премиальные вина с 2005 года, высокое качество которых подтверждалось медалями профессиональных дегустационных конкурсах с самых первых урожай. Однако, особенно ценными представляются награды, завоеванные на международных конкурсах. Вот главные вехи нашего пути:
+
+	div(class="page-inner page-inner--w1")
+		div(class="rewards")
+			div(class="reward-item")
+				div(class="reward-item-year") 2010
+				div(class="reward-item-photo-holder")
+					img(src="../dummy/quality/1.png", class="reward-item-photo")
+					span(class="reward-item-label-holder")
+						img(src="../dummy/quality/11.png", class="reward-item-label")
+				div(class="reward-item-info")
+					div(class="reward-item-title") Золотая Медаль на Mundus Vini (Нойштадт, Германия) за белое сухое вино «Донская Чаша - Ркацители 2009»
+					div(class="reward-item-description") Первая Золотая медаль в истории России (включая Российскую Империю и советский период), полученная тихим вином российского производства на открытом международном конкурсе за всю историю России
+
+			div(class="reward-item")
+				div(class="reward-item-year") 2012
+				div(class="reward-item-photo-holder")
+					img(src="../dummy/quality/2.png", class="reward-item-photo")
+					span(class="reward-item-label-holder")
+						img(src="../dummy/quality/21.png", class="reward-item-label")
+				div(class="reward-item-info")
+					div(class="reward-item-title") Серебряная Медаль на IWC (Лондон, Великобритания) за выдержанное красное сухое вино «Красностоп Золотовский 2010»
+					div(class="reward-item-description") Первая медаль в истории, полученная вином из русского аборигенного сорта винограда на открытом международном конкурсе.
+
+			div(class="reward-item")
+				div(class="reward-item-year") 2014
+				div(class="reward-item-photo-holder")
+					img(src="../dummy/quality/1.png", class="reward-item-photo")
+					span(class="reward-item-label-holder")
+						img(src="../dummy/quality/11.png", class="reward-item-label")
+				div(class="reward-item-info")
+					div(class="reward-item-title") Золотая Медаль на Mundus Vini (Нойштадт, Германия) за выдержанное красное сухое вино «Красностоп Золотовский 2012»
+					div(class="reward-item-description") Первая Золотая медаль в истории, полученная вином из русского аборигенного сорта винограда на открытом международном конкурсе.
+
+
+	div(class="page-description")
+		div(class="page-inner page-inner--w1")
+			div(class="page-text")
+				p Также с 2010 года наши вина удостаивались многочисленных наград разного достоинства на всех престижных европейских конкурсах.
+				p В России «Винодельня Ведерниковъ» является одним из самых титулованных производителей. В частности, практически ни один из «Кубков СВВР» (самый важный и престижный дегустационный конкурс, проводящийся в России с 2012 года) не обходился без победы наших вин в одной из категорий.

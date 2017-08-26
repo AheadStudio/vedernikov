@@ -29,7 +29,8 @@
 				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
-			}
+			},
+			"bodyClass": "page-home"
 		},
 		"home2": {
 			"name": "Главная2",
@@ -37,84 +38,112 @@
 				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
+			},
+			"bodyClass": "page-home"
+		},
+		"catalog": {
+			"name": "Каталог вин",
+			"progress": {
+				"desktop": "50",
+				"tablet": "0",
+				"mobile": "0"
 			}
+		},
+		"team": {
+			"name": "Люди",
+			"progress": {
+				"desktop": "50",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Винодельня Ведерниковъ",
+					"href": "home.html"
+				}, {
+					"name": "Люди"
+				}
+			]
+		},
+		"sorts": {
+			"name": "Сорта",
+			"progress": {
+				"desktop": "50",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Винодельня Ведерниковъ",
+					"href": "home.html"
+				}, {
+					"name": "Сорта винограда"
+				}
+			]
+		},
+		"quality": {
+			"name": "Награды",
+			"progress": {
+				"desktop": "50",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Винодельня Ведерниковъ",
+					"href": "home.html"
+				}, {
+					"name": "Награды"
+				}
+			]
+		},
+		"techs": {
+			"name": "Технологии",
+			"progress": {
+				"desktop": "50",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Винодельня Ведерниковъ",
+					"href": "home.html"
+				}, {
+					"name": "Технологии"
+				}
+			]
 		},
 		"contacts": {
 			"name": "Контакты",
 			"progress": {
-				"desktop": "100",
+				"desktop": "50",
 				"tablet": "0",
 				"mobile": "0"
-			},
-			"breadcrumbs": [
-				{
-					"name": "Главная",
-					"href": "home.html"
-				}
-			],
-			"title": "Контакты"
+			}
 		},
-		"catalog": {
-			"name": "Продукция",
-			"progress": {
-				"desktop": "100",
-				"tablet": "0",
-				"mobile": "0"
-			},
-			"breadcrumbs": [
-				{
-					"name": "Главная",
-					"href": "home.html"
-				}
-			],
-			"title": "Продукция"
-		},
-		"card": {
-			"name": "Карточка товара",
+		"news": {
+			"name": "Новости",
 			"progress": {
 				"desktop": "0",
 				"tablet": "0",
 				"mobile": "0"
+			}
+		},
+		"history": {
+			"name": "История",
+			"progress": {
+				"desktop": "50",
+				"tablet": "0",
+				"mobile": "0"
 			},
 			"breadcrumbs": [
 				{
-					"name": "Главная",
+					"name": "Винодельня Ведерниковъ",
 					"href": "home.html"
 				}, {
-					"name": "Продукция",
-					"href": "catalog.html"
+					"name": "История"
 				}
 			]
-		},
-		"mission": {
-			"name": "Миссия",
-			"progress": {
-				"desktop": "0",
-				"tablet": "0",
-				"mobile": "0"
-			},
-			"breadcrumbs": [
-				{
-					"name": "Главная",
-					"href": "home.html"
-				}
-			],
-			"title": "Миссия"
-		},
-		"about": {
-			"name": "О компании",
-			"progress": {
-				"desktop": "0",
-				"tablet": "0",
-				"mobile": "0"
-			},
-			"breadcrumbs": [
-				{
-					"name": "Главная",
-					"href": "home.html"
-				}
-			],
-			"title": "О компании"
 		}
 	}
 }

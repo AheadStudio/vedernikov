@@ -1,0 +1,68 @@
+extends ../templates/base
+
+block content
+	div(class="page-hero")
+		div(class="page-inner page-inner--w1")
+			if page.breadcrumbs
+				+breadcrumbs({
+					rootClass: "page-breadcrumbs",
+					items: page.breadcrumbs
+				})
+			h1(class="h1") Контакты
+			img(src="../dummy/bgs/contacts.png", class="page-hero-bg")
+
+	div(class="contacts")
+		div(class="page-inner page-inner--w1")
+			div(class="contacts-manufacture")
+				div(class="contacts-manufacture-title") Производство
+				div(class="contacts-manufacture-text")
+					| Россия, 347267, 
+					br
+					| Ростовская область, 
+					br
+					| Константиновский р-н, хутор Ведерников, 
+					br
+					| ул. Промышленная, 1,
+					br
+					a(href="mailto:vin@vinnkvart.ru", class="link link--white") vin@vinnkvart.ru
+					| ,
+					br
+					a(href="tel:+78632504540") +7 (863) 250-45-40
+
+			div(class="contacts-trade")
+				div(class="contacts-trade-title") По вопросам приобретения вин для HoReCa обращайтесь:
+				div(class="contacts-items")
+					div(class="contact-item")
+						p Москва и Санкт-Петербург
+						p
+							| Компания ОКВ 
+							br
+							a(href="tel:") +7 (495) 727-02-11 доб.218
+							br
+							a(href="mailto:", class="link link--black") e.kozlakova@okb-wine.ru
+
+					div(class="contact-item")
+						p Краснодар и Сочи
+						p
+							| Кубаньоптпродторг (Кормилица)
+							br
+							a(href="tel:") +7 (861) 210-05-27
+
+					div(class="contact-item")
+						p Ростов-на-Дону
+						p
+							| Мишель-Алко
+							br
+							a(href="tel:") +7 (863) 268-83-24
+							br
+							a(href="mailto:", class="link link--black") info@michel-alko.ru
+
+					div(class="contact-item")
+						p Сочи
+						p
+							| Юлия и Ко
+							br
+							a(href="tel:") +7 (862) 448-05-30				
+
+
+
