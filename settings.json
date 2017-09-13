@@ -23,17 +23,8 @@
 		"password": "wemakesites-root"
 	},
 	"pages": {
-		"home": {
-			"name": "Главная",
-			"progress": {
-				"desktop": "100",
-				"tablet": "0",
-				"mobile": "0"
-			},
-			"bodyClass": "page-home"
-		},
 		"home2": {
-			"name": "Главная2",
+			"name": "Главная",
 			"progress": {
 				"desktop": "100",
 				"tablet": "0",
@@ -44,15 +35,61 @@
 		"catalog": {
 			"name": "Каталог вин",
 			"progress": {
-				"desktop": "50",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
-			}
+			},
+			"bodyClass": "page-catalog page-intro"
 		},
+		"archive": {
+			"name": "Архив вин",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"bodyClass": "page-catalog page-intro"
+		},
+		"product": {
+			"name": "Карточка вина #1",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"bodyClass": "page-product"
+		},
+		"product2": {
+			"name": "Карточка вина #2",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"bodyClass": "page-product"
+		},
+		"about": {
+			"name": "Винодельня Ведерниковъ",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"bodyClass": "page-intro page-about"
+		},	
+		"terr": {
+			"name": "Терруар",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"bodyClass": "page-intro page-terr"
+		},	
 		"team": {
 			"name": "Люди",
 			"progress": {
-				"desktop": "50",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
 			},
@@ -63,12 +100,13 @@
 				}, {
 					"name": "Люди"
 				}
-			]
+			],
+			"bodyClass": "page-bg"
 		},
 		"sorts": {
 			"name": "Сорта",
 			"progress": {
-				"desktop": "50",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
 			},
@@ -79,12 +117,13 @@
 				}, {
 					"name": "Сорта винограда"
 				}
-			]
+			],
+			"bodyClass": "page-bg"
 		},
 		"quality": {
 			"name": "Награды",
 			"progress": {
-				"desktop": "50",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
 			},
@@ -95,12 +134,13 @@
 				}, {
 					"name": "Награды"
 				}
-			]
+			],
+			"bodyClass": "page-simple"
 		},
 		"techs": {
 			"name": "Технологии",
 			"progress": {
-				"desktop": "50",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
 			},
@@ -111,28 +151,65 @@
 				}, {
 					"name": "Технологии"
 				}
-			]
-		},
+			],
+			"bodyClass": "page-simple"
+		},	
 		"contacts": {
 			"name": "Контакты",
 			"progress": {
-				"desktop": "50",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
-			}
+			},
+			"breadcrumbs": [
+				{
+					"name": "Винодельня Ведерниковъ",
+					"href": "home.html"
+				}, {
+					"name": "Контакты"
+				}
+			],
+			"bodyClass": "page-simple"
+		},
+		"buy": {
+			"name": "Где купить",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"breadcrumbs": [
+				{
+					"name": "Винодельня Ведерниковъ",
+					"href": "home.html"
+				}, {
+					"name": "Где купить"
+				}
+			],
+			"bodyClass": "page-simple"
 		},
 		"news": {
 			"name": "Новости",
 			"progress": {
-				"desktop": "0",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
-			}
+			},
+			"bodyClass": "page-simple"
+		},
+		"article": {
+			"name": "Новость",
+			"progress": {
+				"desktop": "100",
+				"tablet": "0",
+				"mobile": "0"
+			},
+			"bodyClass": "page-simple"
 		},
 		"history": {
 			"name": "История",
 			"progress": {
-				"desktop": "50",
+				"desktop": "100",
 				"tablet": "0",
 				"mobile": "0"
 			},
@@ -143,7 +220,8 @@
 				}, {
 					"name": "История"
 				}
-			]
+			],
+			"bodyClass": "page-simple"
 		}
 	}
 }

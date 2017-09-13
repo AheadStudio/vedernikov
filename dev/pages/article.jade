@@ -1,0 +1,36 @@
+extends ../templates/base
+
+block content
+	div(class="article")
+		div(class="page-inner page-inner--w3")
+			div(class="article-back-holder")
+				a(href="news.html", class="link link--black article-back") Новости
+			h1(class="article-title h1") Высокий класс игры в исполнении «Винодельни Ведерниковъ» на «Кубке Союза виноградарей»
+			div(class="article-date") 17 августа 2017 
+			div(class="article-photo-holder")
+				img(src="../dummy/article.png", class="article-photo")
+			div(class="article-content")
+				div(class="page-text")
+					p В Абрау-Дюрсо завершился очередной ежегодный Всероссийский Саммит виноделов, в рамках которого проводится дегустационный конкурс, становящийся все более и более важным индикатором оценки качества российских вин.
+
+					p Напомним, что жюри конкурса оценивает представленные вина ведущих российских хозяйств в слепой дегустации, в которой также участвуют образцы зарубежных вин самого высокого ранга и ценовой категории. Члены жюри являются более чем авторитетными международными экспертами - в этом году вместе с нашим соотечественником Анатолием Корнеевым (вице-президент компании Simple) винам давали оценку пять иностранцев:
+
+					p Тим Аткин (Tim Atkin) - Master of Wine, Великобритания,
+
+					p Сара Эббот (Sarah Abbott) - Master of Wine, Великобритания,
+
+					p Хосе Пенин (Jose Penin) - автор ежегодного справочника Guida Penin, Испания,
+
+					p Роберт Джозеф (Robert Joseph) - председатель International Wine &amp; Spirits Challenge, Великобритания,
+
+					p Даррел Джозеф (Darrel Joseph) - эксперт по винам Центральной и Восточной Европы, США.
+
+			div(class="article-nav")
+				a(href="article.html", class="article-nav-item article-nav-item--prev")
+					span(class="article-nav-item-icon")
+						include ../../prod/svg/larr.svg
+					span(class="article-nav-item-title") Назад
+				a(href="article.html", class="article-nav-item article-nav-item--next")
+					span(class="article-nav-item-icon")
+						include ../../prod/svg/rarr.svg
+					span(class="article-nav-item-title") Вперед

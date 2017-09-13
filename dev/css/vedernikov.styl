@@ -1,10 +1,10 @@
 @import "nib"
+@import "../lib/css/css"
 
 /*** Reset ***/
 global-reset();
 reset-html5();
 form-reset();
-
 b
 strong
 i
@@ -12,6 +12,7 @@ em
 	font-style normal
 	font-weight normal
 /*** //Reset ***/
+
 
 
 /*** Fonts ***/
@@ -41,10 +42,12 @@ em
 /*** //Fonts ***/
 
 
+
 /*** Vars ***/
 $colorText = #000
 $transitionAnimation = cubic-bezier(0.250, 0.460, 0.450, 0.940)
 /*** //Vars ***/
+
 
 
 /*** Base ***/
@@ -69,20 +72,28 @@ body
 	margin 0 auto
 
 	box-sizing border-box
+	width 100%
 
 	&--relative
 		position relative
 
 	&--w0
-		max-width 100%
+		max-width 2000px
 		padding 0 50px
-
+		
 	&--w1
+		max-width 2000px
+		padding 0 100px
+
+	&--w2
 		max-width 1300px
 		padding 0 30px
 
-	&--w2
+	&--w3
 		max-width 930px
+		
+	&--w4
+		max-width 800px
 
 	&--half
 		margin 0
@@ -97,21 +108,6 @@ body
 	padding 0
 /*** //Base ***/
 
-
-/*** Content ***/
-.link
-	text-decoration none
-
-	&[href*=tel]
-	/[href*=tel]
-		text-decoration none
-		color inherit
-
-img
-	&.resize
-		width 100%
-		height auto
-/*** //Content ***/
 
 
 /*** Header ***/
@@ -176,7 +172,7 @@ img
 	float right
 	position relative
 	z-index 1010
-	top 10px
+	top 15px
 
 	display block
 	width 30px
@@ -341,6 +337,8 @@ img
 			color #BAA079
 /*** //Header ***/
 
+
+
 /*** Footer ***/
 .page-footer
 	padding 0
@@ -490,6 +488,46 @@ img
 /*** //Footer ***/
 
 
+
+/*** Pages ***/
+.page-simple
+.page-bg
+.page-product
+	background-color #F8F6F2
+	
+	.page
+		padding-top 100px
+	
+	.page-header
+		position fixed
+		z-index 1000
+		
+		box-sizing border-box
+		width 100%
+		height 100px
+		
+		background-color #FFF
+
+.page-bg
+	background #F8F6F2 url("../dummy/bgs/simple.png") no-repeat center center
+	background-attachment fixed
+	
+.page-catalog
+	background #F8F6F2 url("../dummy/catalog_bg.png") no-repeat center center
+	background-attachment fixed
+	background-size cover
+	
+.page-terr
+.page-about
+	background-color #F8F6F2
+	
+.page-intro
+	.intro
+		height 70vh
+/*** //Pages ***/
+
+
+
 /*** Content ***/
 .btn
 	position relative
@@ -552,7 +590,307 @@ img
 				opacity 1
 
 				transform translateX(0)
+				
+	&--white
+		padding 12px 22px
+
+		border 1px solid #FFF
+
+		font-size 16px
+		color #FFF
+		text-transform uppercase
+		letter-spacing 3.5px
+
+		transition color .3s $transitionAnimation, background-color .3s $transitionAnimation
+
+		span
+			position relative
+			z-index 20
+
+			transition color .3s $transitionAnimation
+
+			transition-delay .2s
+
+		&:after
+			background-color #FFF
+
+		&:hover
+			transform translateY(0)
+
+			span
+				color #333
+
+			&:after
+				opacity 1
+
+				transform translateX(0)
+				
+.link
+	line-height 1
+	text-decoration none
+	
+	transition .3s border-bottom-color $transitionAnimation, .3s color $transitionAnimation
+	
+	&[href*=tel]
+	/[href*=tel]
+		text-decoration none
+		color inherit
+		
+	&--white
+		border-bottom 1px solid #FFF
+
+		color #FFF
+		
+		&:hover
+			border-bottom-color transparent
+
+	&--orange
+		border-bottom 1px solid #BAA079
+
+		color #BAA079
+		
+		&:hover
+			border-bottom-color transparent
+			
+	&--black
+		border-bottom 1px solid #4A4A4A
+
+		color #4A4A4A
+		
+		&:hover
+			border-bottom-color #BAA079
+			
+			color #BAA079
+
+img
+	&.resize
+		width 100%
+		height auto
+
+.page-text
+	font-size 16px
+	color #4A4A4A
+	line-height 32px
+	
+	b
+	strong
+		font-family "NotoSerifBold"
+	
+	p
+		margin-bottom 15px
+		
+		&:last-child
+			margin-bottom 0
+
+	h1
+	/.h1
+		margin-bottom 15px
+
+		font-family "Elizabeth"
+		font-size 60px
+		line-height 60px
+		
+	h2
+	/.h2
+		margin-bottom 20px
+
+		font-family "Elizabeth"
+		font-size 32px
+		line-height 40px
+		color #333333
+		
+	img
+		display block
+		max-width 50%
+		height auto
+		
+		&[align=left]
+			float left
+			margin 0 100px 0 0
+			
+		&[align=right]
+			float right
+			margin 0 0 0 100px
+		
+	table
+		width 100%
+		
+		thead
+			th
+				border-bottom 1px solid #979797
+
+				font-size 12px
+				color #4A4A4A
+				text-transform uppercase
+				line-height 32px
+				letter-spacing 1.5px
+				
+		tbody
+			td
+				vertical-align top
+				
+				padding 15px 0
+				padding-right 50px
+
+				border-bottom 1px solid #979797
+				
+				img
+					max-width 100%
+		
+.image
+	margin 50px 0
+	
+	opacity 0
+	
+	transition .5s opacity $transitionAnimation
+	
+	&:last-child
+		margin-bottom 0
+		
+	&.animated
+		opacity 1
+	
+	img
+		margin 0 auto
+
+		display block
+		width 100%
+		
+.tabs
+	margin-bottom 100px
+
+	.tabs-heading
+		margin-bottom 45px
+		
+		.tab-heading-item
+			vertical-align middle
+			margin-right 15px
+
+			box-sizing border-box
+			display inline-block
+			padding 11px 20px
+			
+			border 1px solid transparent
+			
+			font-size 16px
+			color #BAA079
+			letter-spacing 3.5px
+			text-transform uppercase
+			text-decoration none
+			
+			transition .3s border-color $transitionAnimation
+			
+			&:last-child
+				margin-right 0
+				
+			&.active
+				border-color #BAA079
+				
+			&:hover
+				border-color #BAA079
+				
+	.tab-content-item
+		display none
+		
+		&.active
+			display block
 /*** //Content ***/
+
+
+
+/*** Forms ***/
+.jcf-radio
+	position relative
+	vertical-align middle
+
+	box-sizing border-box
+	display inline-block
+	overflow hidden
+	
+	input
+		position absolute
+		left 0
+		top 0
+
+		display block
+		width 100%
+		height 100%
+		
+		opacity 0
+		
+.jcf-select
+	position relative
+	
+	box-sizing border-box
+	display block
+	width 100%
+	padding 10px 20px
+	
+	border 1px solid #BAA079
+	
+	cursor pointer
+	
+	transition .3s background-color $transitionAnimation
+	
+	.jcf-select-text
+		display block
+		padding-right 50px
+		
+		font-size 16px
+		color #BAA079
+		line-height 32px
+		
+	.jcf-select-opener
+		position absolute
+		right 20px
+		top 19px
+
+		width 22px
+		height 16px
+		
+		background url("../svg/select.svg") no-repeat center center
+		background-size contain
+		
+		transition .3s transform $transitionAnimation
+		
+	&.jcf-drop-active
+		background-color #FFF
+
+		.jcf-select-opener
+			transform rotate(-180deg)
+			
+.jcf-select-drop
+	z-index 100
+	
+	box-sizing border-box
+	
+	background-color #F8F6F2
+	border 1px solid #BAA079
+	border-top none
+	
+	.jcf-select-drop-content
+		max-height 250px
+		overflow scroll
+		overflow-x hidden
+	
+	.jcf-list
+	.jcf-list-content
+		display block
+		
+	.jcf-option
+		display block
+		padding 10px 15px
+		
+		cursor pointer
+		font-size 16px
+		color #4A4A4A
+		
+		transition .3s color $transitionAnimation
+		
+		&:hover
+			color #BAA079
+/*** //Forms ***/
+
 
 
 /*** Intro ***/
@@ -612,8 +950,29 @@ img
 
 		transition transform .5s $transitionAnimation, opacity .5s $transitionAnimation
 		transition-delay 0.5s
+		
+	.intro-title
+		margin-bottom 30px
 
-.loaded
+		font-family "Elizabeth"
+		font-size 100px
+		line-height 90px
+		color #FFF
+		text-align center
+		letter-spacing -4px
+		
+	.intro-note
+		margin-top -20px
+
+		font-size 24px
+		color #FFF
+		line-height 34px
+		text-align center
+		
+	.intro-btn-holder
+		text-align center
+
+.loaded:not(.page-intro)
 	.intro
 		.intro-bg
 			transform scale(1.05)
@@ -625,6 +984,170 @@ img
 			opacity 1
 
 			transform translateY(0)
+			
+.page-hero
+	position relative
+	
+	box-sizing border-box
+	padding 60px 0 105px 0
+	overflow hidden
+	min-height 335px
+	
+	&:after
+		content ""
+		
+		position absolute
+		left 0
+		top 0
+		z-index 20
+		
+		display block
+		width 100%
+		height 100%
+		
+		background-color rgba(40, 40, 40, 0.8)
+	
+	.page-hero-bg
+		position absolute
+		left 0
+		top 0
+		z-index 10
+
+		display block
+		width 100%
+		height 100%
+		
+		object-fit cover
+		
+	.page-hero-inner
+		position relative
+		z-index 30
+		
+		text-align center
+		
+	.page-hero-title
+		padding 0 150px
+		
+		font-family "Elizabeth"
+		font-size 66px
+		color #FFF
+		line-height 60px
+			
+.page-heading
+	margin-top 100px
+	
+	padding 5px 0
+	
+	.page-heading-title
+		font-family "Elizabeth"
+		font-size 100px
+		line-height 100px
+		color #4A4A4A
+		text-align center
+
+.page-breadcrumbs
+	margin-bottom 65px
+	
+	.page-breadcrumbs-item-holder
+		vertical-align middle
+
+		display inline-block
+		
+		&:after
+			content "/"
+			
+			vertical-align middle
+			margin 0 2px
+			
+			display inline-block
+			
+			color #FFF
+			font-size 14px
+			line-height 1
+			
+		&:last-child
+			&:after
+				content none
+				
+			.page-breadcrumbs-item
+				border-bottom none
+		
+	.page-breadcrumbs-item
+		border-bottom 1px solid #FFF
+
+		font-size 14px
+		line-height 1
+		color #FFF
+		text-decoration none
+		
+		transition .3s border-bottom-color $transitionAnimation
+		
+		&:hover
+			border-bottom-color transparent
+			
+.page-cite
+	margin 95px 0 50px 0
+	
+	opacity 0
+
+	font-family "ElizabethItalic"
+	font-size 44px
+	color #4A4A4A
+	line-height 54px
+	
+	transition .3s opacity $transitionAnimation
+
+	.page-cite-inner
+		padding 0
+		
+	&.animated
+		opacity 1
+		
+.page-description
+	margin 50px 0
+	
+	overflow hidden
+	
+	opacity 0
+	
+	transition .3s opacity $transitionAnimation
+	
+	.page-description-inner
+		float right
+
+		width 60%
+		
+	&.animated
+		opacity 1
+		
+.page-menu
+	padding 25px 0
+
+	background-color #BAA079
+	
+	text-align center
+	
+	.page-menu-item-holder
+		vertical-align middle
+		margin 0 35px
+		
+		display inline-block
+		
+	.page-menu-item
+		display block
+		padding 5px 0
+		
+		border-bottom 1px solid transparent
+		
+		text-decoration none
+		color #FFF
+		font-size 18px
+		line-height 1
+		
+		transition border-bottom-color .3s $transitionAnimation
+		
+		&:hover
+			border-bottom-color #FFF
 /*** //Intro ***/
 
 
@@ -776,6 +1299,8 @@ img
 /*** Cats ***/
 .cats
 	font-size 0
+	
+	background-color #282828
 
 .cat-item
 	position relative
@@ -1051,12 +1576,30 @@ img
 		font-size 16px
 
 	.news-item-name
+		margin-bottom 25px
+
 		font-size 32px
 		line-height 36px
 		font-family "Elizabeth"
 		color #333333
 
 		transition color .6s $transitionAnimation
+		
+	.news-item-description
+		margin-bottom 20px
+
+		font-size 16px
+		line-height 32px
+		color #4A4A4A
+		text-align left
+		
+	.news-item-more
+		font-size 14px
+		color #BAA079
+		text-transform uppercase
+		letter-spacing 2px
+		line-height 32px
+		text-align left
 
 	&:hover
 		.news-item-photo
@@ -1067,7 +1610,1606 @@ img
 
 		.news-item-name
 			color #baa079
+			
+.news
+	&--list
+		padding-bottom 0
+
+		.news-items
+			.news-item
+				margin-bottom 450px
+				
+			.load-more-holder
+				margin-top -80px
 /*** //News ***/
+
+
+
+/*** Load more ***/
+.load-more-holder
+	margin 100px 0
+	
+	text-align center
+	
+	.load-more
+		margin 0 auto
+
+		display block
+		width 45px
+		height 45px
+		
+		background url("../svg/load.svg") no-repeat center center
+		background-size contain
+		
+		transition .5s transform $transitionAnimation
+			
+		&:hover:not(.animate)
+			transform rotate(-360deg)
+
+		&.loading
+			animation load .5s linear infinite
+		
+.loaded-item
+	transition opacity .3s cubic-bezier(0.250, 0.460, 0.450, 0.940), transform .3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
+
+	&--hidden
+		opacity 0
+		
+		transform translateY(50px)
+		
+	&--visible
+		opacity 1
+		
+		transform translateY(0)
+/*** //Load more ***/
+
+
+
+/*** Article ***/
+.article
+	padding-top 60px
+	
+	.article-back-holder
+		margin-bottom 45px
+
+		text-align center
+		
+		.article-back
+			font-size 14px
+		
+	.article-title
+		margin-bottom 35px
+
+		text-align center
+		
+	.article-date
+		margin-bottom 50px
+
+		text-align center
+		
+	.article-photo-holder
+		margin-bottom 55px
+
+		img
+			display block
+			width 100%
+			height auto
+			
+	.article-content
+		padding 0 70px
+		
+.article-nav
+	margin 100px 0
+	
+	padding 0 70px
+	
+	font-size 0
+	
+	.article-nav-item
+		position relative
+
+		box-sizing border-box
+		display inline-block
+		width 50%
+		padding 2px 20px
+		overflow hidden
+		
+		border 1px solid #BAA079
+		
+		text-decoration none
+		
+		&:after
+			content ""
+
+			position absolute
+			z-index 10
+			left 0
+			top 0
+
+			display block
+			width 100%
+			height 100%
+
+			opacity 0
+			background-color #BAA079
+
+			transition transform .3s $transitionAnimation, opacity .3s $transitionAnimation
+		
+		&:last-child
+			margin-left -1px
+		
+		.article-nav-item-icon
+			position relative
+			z-index 20
+
+			display inline-block
+			
+			line-height 54px
+			
+			svg
+				vertical-align middle
+
+				display inline-block
+				width 100%
+				height auto
+				
+				path
+					fill #BAA079
+					stroke #BAA079
+
+					transition fill .3s $transitionAnimation, stroke .3s $transitionAnimation
+		
+		.article-nav-item-title
+			position relative
+			z-index 20
+
+			font-size 14px
+			line-height 54px
+			color #BAA079
+			text-transform uppercase
+			letter-spacing 3px
+			
+			transition color .3s $transitionAnimation
+			
+		&:hover
+			&:after
+				opacity 1
+				
+				transform translateX(0)
+				
+			.article-nav-item-title
+				color #FFF
+				
+			.article-nav-item-icon
+				svg
+					path
+						fill #FFF
+						stroke #FFF
+			
+		&--prev
+			&:after
+				transform translateX(100%)
+
+			.article-nav-item-icon
+				float left
+				
+			.article-nav-item-title
+				float right
+				
+		&--next
+			&:after
+				transform translateX(-100%)
+
+			.article-nav-item-icon
+				float right
+				
+			.article-nav-item-title
+				float left
+/*** //Article ***/
+
+
+
+/*** Team ***/
+.team-item
+	position relative
+	margin 90px 0 120px 0
+	
+	overflow hidden
+	
+	.team-item-inner
+		position relative
+		
+		background-color #FFF
+	
+	.team-item-photo-holder
+		position absolute
+		left 0
+		top 0
+
+		width 50%
+		height 100%
+		
+		.team-item-photo
+			display block
+			width 100%
+			height 100%
+			
+			object-fit cover
+			object-position top
+			
+			opacity 0
+			transform scale(1.1)
+			
+			transition .5s opacity $transitionAnimation, .5s transform $transitionAnimation
+			
+	.team-item-info
+		padding-left 50%
+		
+		.team-item-info-inner
+			padding 165px 75px
+			
+			opacity 0
+			transform translateX(20px)
+			
+			transition .5s opacity $transitionAnimation, .5s transform $transitionAnimation
+			transition-delay .2s
+			
+	.team-item-name
+		margin-bottom 20px
+
+		font-family "Elizabeth"
+		font-size 32px
+		line-height 34px
+		color #333
+		
+	.team-item-post
+		margin-bottom 20px
+
+		font-family "NotoSerifItalic"
+		font-size 16px
+		color #4A4A4A
+		line-height 32px
+		
+	.team-item-text
+		color #4A4A4A
+		font-size 16px
+		line-height 32px
+		
+	&:nth-child(2n)
+		.team-item-photo-holder
+			right 0
+			left auto
+			
+		.team-item-info
+			padding-right 50%
+			padding-left 0
+			
+			.team-item-info-inner
+				transform translateX(-20px)
+			
+	&.animated
+		.team-item-photo-holder
+			.team-item-photo
+				opacity 1
+				transform scale(1)
+		
+		.team-item-info	
+			.team-item-info-inner
+				opacity 1
+				
+				transform translateX(0)
+/*** //Team ***/
+
+
+
+/*** Sorts ***/
+.sort-item
+	position relative
+	margin 220px 0 170px 0
+	
+	padding 220px 0
+	
+	&:last-child
+		margin-bottom 0
+	
+	.sort-item-info
+		position relative
+		z-index 20
+
+		display inline-block
+		box-sizing border-box
+		padding 75px 60px 60px 60px
+		max-width 590px
+
+		background-color #FFF
+		opacity 0
+		
+		text-align center
+		
+		transform translateY(70px)
+
+		transition .5s opacity $transitionAnimation, .5s transform $transitionAnimation
+		transition-delay .2s
+		
+		.sort-item-name
+			margin-bottom 30px
+
+			font-family "Elizabeth"
+			font-size 32px
+			line-height 34px
+			color #333333
+			
+		.sort-item-area
+			margin-bottom 20px
+
+			font-family "Elizabeth"
+			font-size 44px
+			line-height 34px
+			color #333333
+			letter-spacing -2px
+		
+		.sort-item-note
+			margin-bottom 10px
+
+			font-family "NotoSerifItalic"
+			font-size 16px
+			line-height 32px
+			
+		.sort-item-description
+			margin-bottom 25px
+
+			font-size 16px
+			line-height 32px
+			color #4A4A4A
+			
+	.sort-item-bg
+		position absolute
+		z-index 10
+		left 0
+		top 0
+		
+		display block
+		width 100%
+		height 100%
+		
+		object-fit cover
+		
+		transform scale(1.1)
+		opacity 0
+		
+		transition .5s opacity $transitionAnimation, .5s transform $transitionAnimation
+		
+
+
+	&.animated
+		.sort-item-info
+			opacity 1
+			transform translateY(0)
+			
+		.sort-item-bg
+			opacity 1
+			transform scale(1)
+/*** //Sorts ***/
+
+
+
+/*** Rewards ***/
+.reward-item
+	margin 70px 0
+
+	box-sizing border-box
+	padding 35px 55px
+
+	background-color #FFF
+	
+	font-size 0
+	
+	.reward-item-product
+		vertical-align middle
+		position relative
+		
+		display inline-block
+		width 40%
+		
+		text-align center
+	
+	.reward-item-year
+		position absolute
+		left 0
+		top 100px
+
+		font-family "Elizabeth"
+		font-size 60px
+		line-height 1
+		color #333333
+		
+		opacity 0
+		transform translateX(-30px)
+		
+		transition .5s opacity $transitionAnimation, transform .5s $transitionAnimation
+		
+	.reward-item-photo-holder
+		position relative
+		left 25px
+
+		display inline-block
+		
+		.reward-item-photo
+			display block
+			max-width 100%
+			height auto
+			
+			opacity 0
+			
+			transition .5s opacity $transitionAnimation
+			transition-delay .2s
+			
+		.reward-item-label-holder
+			position absolute
+			right -80px
+			top 160px
+
+			display block
+			
+			opacity 0
+			transform translateX(30px)
+			
+			transition .5s opacity $transitionAnimation, transform .5s $transitionAnimation
+			transition-delay .4s
+			
+			img
+				display block
+				max-width 100%
+				height auto
+				
+	.reward-item-info
+		vertical-align middle
+
+		display inline-block
+		width 40%
+		
+		opacity 0
+		transform translateY(30px)
+		
+		transition .5s opacity $transitionAnimation, transform .5s $transitionAnimation
+		transition-delay .6s
+		
+	&.animated
+		.reward-item-year
+		.reward-item-photo
+		.reward-item-label-holder
+		.reward-item-info	
+			opacity 1
+			transform translate(0, 0)
+/*** //Rewards ***/
+
+
+
+/*** Techs ***/
+.tech-item
+	margin 110px 0
+	
+	display flex
+	flex-wrap wrap
+	overflow hidden
+	
+	background-color #FFF
+	
+	font-size 0
+	
+	.tech-item-col
+		vertical-align top
+
+		display inline-block
+		overflow hidden
+		
+		.page-text
+			padding 40px 30px
+			
+			opacity 0
+			transform translateY(50px)
+			
+			transition .6s opacity $transitionAnimation, transform .6s $transitionAnimation
+			
+		img
+			display block
+			width 100%
+			height 100%
+			
+			object-fit cover
+			
+			opacity 0
+			transform scale(1.1)
+			
+			transition .6s opacity $transitionAnimation, transform .6s $transitionAnimation
+		
+		&--w1
+			width 25%
+			
+		&--w2
+			width 50%
+			
+		&--w3
+			width 75%
+			
+	&.animated
+		.tech-item-col
+			.page-text
+				opacity 1
+				transform translateY(0)
+				
+			img
+				opacity 1
+				transform scale(1)
+/*** //Techs ***/
+
+
+
+/*** Contacts ***/
+.contacts
+	position relative
+
+	overflow hidden
+	
+	&:before
+	&:after
+		content ""
+		
+		position absolute
+		z-index 10
+
+		display block
+		width 50%
+		height 100%
+		
+	&:before
+		left 0
+		top 0
+
+		background url("../dummy/contacts.png") no-repeat center center
+		background-size cover
+
+	&:after
+		right 0
+		top 0
+		
+		background-color #F8F6F2
+		
+	&.animated
+		.contacts-manufacture
+		.contacts-trade
+			opacity 1
+			transform translateY(0)
+
+.contacts-manufacture
+.contacts-trade
+	position relative
+	z-index 20
+	float left
+	
+	box-sizing border-box
+	width 50%
+	padding 140px 80px
+	
+	opacity 0
+	transform translateY(30px)
+	
+	transition .5s opacity $transitionAnimation, .5s transform $transitionAnimation
+
+.contacts-manufacture
+	color #FFF
+	
+	.contacts-manufacture-title
+		margin-bottom 80px
+
+		font-family "Elizabeth"
+		font-size 32px
+		line-height 34px
+		
+	.contacts-manufacture-text
+		font-size 24px
+		line-height 44px
+		
+.contacts-trade
+	padding-right 0
+
+	color #333
+
+	.contacts-trade-title
+		margin-bottom 35px
+
+		font-family "Elizabeth"
+		font-size 32px
+		line-height 40px
+		
+.contacts-items
+	font-size 0
+	
+	.contact-item
+		vertical-align top
+		margin-bottom 50px
+		
+		box-sizing border-box
+		display inline-block
+		width 50%
+		padding-right 20px
+		
+		&:nth-child(3)
+		&:nth-child(4)
+			margin-bottom 0
+/*** //Contacts ***/
+
+
+
+/*** History ***/
+.history
+	&:first-child
+		margin-top 140px
+
+.history-item
+	position relative
+	margin 120px 0
+	
+	overflow hidden
+	
+	.history-item-photo-holder
+		width 77%
+
+		.history-item-photo
+			display block
+			width 100%
+			height auto
+			
+			opacity 0
+			
+			transition .6s opacity $transitionAnimation
+			
+	.history-item-info
+		position absolute
+		bottom 0px
+
+		box-sizing border-box
+		display block
+		width 35%
+		padding 70px 50px
+
+		background-color #FFF
+		
+		opacity 0
+		transform translateY(50px)
+		
+		transition .6s opacity $transitionAnimation, .6s transform $transitionAnimation
+	
+	&--centered
+		margin 100px 0
+		
+		.page-text
+			img
+				opacity 0.28
+	
+	&--aside
+		padding-bottom 65px
+		
+		&:nth-of-type(1n)
+			.history-item-photo-holder
+				float right
+				
+			.history-item-info
+				left 13%
+				right auto
+			
+		&:nth-of-type(2n)
+			.history-item-photo-holder
+				float left
+			
+			.history-item-info
+				left auto
+				right 13%
+				
+	&.animated
+		.history-item-photo-holder
+			.history-item-photo
+				opacity 1
+		
+		.history-item-info
+			opacity 1
+			transform translateY(0)
+/*** //History ***/
+
+
+
+/*** Filter ***/
+.filter
+	margin 55px 0 95px 0
+	
+	text-align center
+	
+	.filter-item
+		vertical-align middle
+		margin 0 23px
+
+		display inline-block
+		
+		cursor pointer
+		
+		.filter-item-name
+			vertical-align middle
+
+			display inline-block
+
+			font-size 16px
+			color #BAA079
+			line-height 30px
+			text-transform uppercase
+			letter-spacing 2.3px
+			
+			transition .3s color $transitionAnimation
+			
+		.jcf-radio
+			transition .3s background-color $transitionAnimation, .3s border-color $transitionAnimation
+			
+		&.jcf-label-active
+			.filter-item-name
+				color #4A4A4A
+			
+		&--red
+		&--white
+		&--pink
+			.jcf-radio
+				margin-right 10px
+
+				box-sizing border-box
+				width 30px
+				height 30px
+				
+				border 1px solid #BAA079
+				border-radius 50%
+				
+			&.jcf-label-active
+				.jcf-radio
+					border-color #4A4A4A
+					
+		&--barrel
+			.jcf-radio
+				position relative
+				margin-right 10px
+
+				width 37px
+				height 30px
+				
+				&:after
+				&:before
+					content ""
+
+					position absolute
+					left 0
+					top 0
+					
+					display block
+					width 100%
+					height 100%
+					
+					background-position center center
+					background-size contain
+					background-repeat no-repeat
+					
+					transition opacity .3s $transitionAnimation
+				
+				&:after
+					background-image url("../svg/barrel_orange.svg")
+					
+				&:before
+					opacity 0
+					background-image url("../svg/barrel_black.svg")
+					
+		&--all
+			.jcf-radio
+				position relative
+				margin-right 30px
+				
+				overflow visible
+
+			.jcf-radio
+				span
+				&:before
+				&:after
+					content ""
+					
+					box-sizing border-box
+					display inline-block
+					width 30px
+					height 30px
+					
+					border-radius 50%
+					border 1px solid #BAA079
+					background-color #F8F6F2
+					
+					transition .3s background-color $transitionAnimation
+					
+				span
+					position relative
+					z-index 20
+				
+				&:before
+				&:after
+					position absolute
+					top -1px
+				
+				&:before
+					left -20px
+					z-index 30
+					
+				&:after
+					left 20px
+					z-index 10
+					
+			&.jcf-label-active
+				.jcf-radio
+					&:before
+						background-color #B92323
+						
+					span
+						background-color #F3E6B0
+						
+					&:after
+						background-color #E9B6B6
+					
+		&--red
+			&.jcf-label-active
+				.jcf-radio
+					background-color #B92323
+			
+		&--white
+			&.jcf-label-active
+				.jcf-radio
+					background-color #F3E6B0
+					
+		&--pink
+			&.jcf-label-active
+				.jcf-radio
+					background-color #E9B6B6
+					
+		&--barrel
+			&.jcf-label-active
+				.jcf-radio
+					&:after
+						opacity 0
+						
+					&:before
+						opacity 1
+/*** //Filter ***/
+
+
+
+/*** Catalog ***/
+.catalog
+	&--inline
+		padding-top 60px
+
+		background #F8F6F2 url("../dummy/catalog_bg.png") no-repeat center center
+		background-attachment fixed
+		background-size cover
+
+.catalog-items
+	display flex
+	flex-wrap wrap
+	
+	opacity 1
+	
+	transition .3s opacity $transitionAnimation
+	
+	&.hidden
+		opacity 0
+	
+.catalog-title
+	margin-bottom 80px
+	
+	font-family "Elizabeth"
+	font-size 44px
+	color #333333
+	line-height 44px
+	text-align center
+
+.catalog-item
+	margin-bottom 60px
+	vertical-align top
+
+	box-sizing border-box
+	display inline-block
+	width (100/3)%
+	padding 0 6%
+	
+	text-align center
+	text-decoration none
+	
+	&.hidden
+		display none
+		
+	&.visible
+		display block
+	
+	.catalog-item-inner
+		position relative
+
+		display inline-block
+		
+		text-decoration none
+		
+	.catalog-item-photo-holder
+		margin-bottom 15px
+		
+		height 500px
+		
+		opacity 0
+		
+		transform translateY(20px)
+		
+		transition .6s opacity $transitionAnimation, .6s transform $transitionAnimation
+		
+		.catalog-item-photo-inner
+			position relative
+			
+			display inline-block
+			
+			&:after
+				content ""
+				
+				position absolute
+				z-index 10
+				left 50%
+				bottom -17px
+				transform translateX(-50%)
+				
+				display block
+				width 220px
+				height 60px
+				
+				background url("../i/shadow.png") no-repeat center center
+				opacity 1
+				
+				transition .3s opacity $transitionAnimation, .3s transform $transitionAnimation
+		
+		.catalog-item-photo
+			position relative
+			z-index 20
+			margin 0 auto
+
+			display block
+			width auto
+			max-width 100%
+			height auto
+			max-height 100%
+			
+			transition .3s transform $transitionAnimation
+			
+	.catalog-item-brand
+		margin-bottom 20px
+
+		font-size 14px
+		color #4A4A4A
+		
+		opacity 0
+		transform translateY(10px)
+		
+		transition .3s transform $transitionAnimation, .3s opacity $transitionAnimation
+		transition-delay .5s
+		
+	.catalog-item-name
+		font-family "Elizabeth"
+		font-size 32px
+		line-height 34px
+		color #333333
+		
+		opacity 0
+		transform translateY(10px)
+		
+		transition .3s color $transitionAnimation, .3s transform $transitionAnimation, .3s opacity $transitionAnimation
+		
+	.catalog-item-num
+		position absolute
+		right 0
+		top 100px
+		
+		display block
+		width 75px
+		height 100px
+		
+		background url("../svg/medal.svg") no-repeat center center
+		background-size contain
+		opacity 0
+		
+		transform translateY(10px)
+		
+		font-family "Elizabeth"
+		font-size 32px
+		line-height 85px
+		color #333333
+		text-align center
+		
+		transition .3s transform $transitionAnimation, .3s opacity $transitionAnimation
+		transition-delay .5s
+		
+	&.animated
+		.catalog-item-photo-holder
+			opacity 1
+			
+			transform translateY(0)
+			
+		.catalog-item-brand
+		.catalog-item-name
+		.catalog-item-num
+			opacity 1
+			
+			transform translateY(0)
+	
+	.catalog-item-inner
+		&:hover
+			.catalog-item-photo-holder
+				.catalog-item-photo-inner
+					&:after
+						opacity 0.5
+						
+						transform scale(1.1) translateX(-45%)
+
+				.catalog-item-photo
+					transform translateY(-30px)
+
+			.catalog-item-name
+				color #BAA079
+			
+	&--empty
+		.catalog-item-photo-holder
+			opacity 0.5
+			
+		&.animated
+			.catalog-item-photo-holder
+				opacity 0.5
+/*** //Catalog ***/
+
+
+
+/*** Product ***/
+.product-heading
+	padding 55px 0
+
+	background-color #282828
+	
+	text-align center
+	
+	.product-brand
+		margin-bottom 30px
+
+		font-family "NotoSerifItalic"
+		font-size 16px
+		color #FFF
+		
+	.product-name
+		margin-bottom 20px
+
+		font-family "Elizabeth"
+		font-size 66px
+		color #FFF
+		line-height 60px
+		
+	.product-type
+		font-size 16px
+		color #FFF
+		text-transform uppercase
+		letter-spacing 2px
+		
+.product-row
+	display flex
+	
+	.product-photo-holder
+		position relative
+		float left
+		
+		width 50%
+		
+		background-color #FFF
+		
+		.product-photo-inner
+			opacity 0
+			background url("../dummy/bgs/product.png") no-repeat center center
+			
+			transform translateX(-100px)
+			
+			transition .6s transform $transitionAnimation, .6s opacity $transitionAnimation
+		
+		.product-photo
+			margin 0 auto
+
+			display block
+			max-width 100%
+			height auto
+			
+			transform translateY(-100px)
+			
+		&.animated
+			.product-photo-inner
+				opacity 1
+				transform translateX(0)
+		
+	.product-info
+		float left
+		
+		box-sizing border-box
+		width 50%
+		
+	.product-features
+		padding 55px 50px
+
+		background-color #F8F6F2
+		
+		.product-features-items
+			opacity 0
+			
+			transform translateX(100px)
+			
+			transition .6s transform $transitionAnimation, .6s opacity $transitionAnimation
+		
+		.product-feature-item
+			margin-bottom 35px
+			
+			overflow hidden
+			
+			&:last-child
+				margin-bottom 0
+				
+			.product-feature-item-icon
+				float left
+				
+				box-sizing border-box
+				width 55px
+				height 60px
+				padding 0 10px
+				
+				background-position center top
+				background-repeat no-repeat
+				
+				svg
+					margin 0 auto
+
+					display block
+					width auto
+					height auto
+					max-width 100%
+					max-height 100%
+				
+			.product-feature-description
+				padding-left 80px
+				
+				.product-feature-item-description-title
+					margin-bottom 10px
+
+					color #4A4A4A
+					font-size 16px
+					letter-spacing 2px
+					line-height 1
+					text-transform uppercase
+					
+				.product-feature-item-description-text
+					color #4A4A4A
+					font-size 16px
+					line-height 26px
+					
+			&--year
+				.product-feature-item-icon
+					background-image url("../svg/v11.svg")
+					background-size 22px 29px
+					
+			&--grapes
+				.product-feature-item-icon
+					background-image url("../svg/v2.svg")
+					background-size 34px 48px
+					
+			&--color
+				.product-feature-item-icon
+					background-image url("../svg/v3.svg")
+					background-size 38px 42px
+					
+			&--scent
+				.product-feature-item-icon
+					background-image url("../svg/v4.svg")
+					background-size 24px 33px
+					
+			&--taste
+				.product-feature-item-icon
+					background-image url("../svg/v5.svg")
+					background-size 35px 19px
+					
+			&--combination
+				.product-feature-item-icon
+					background-image url("../svg/v6.svg")
+					background-size 25px 45px
+					
+			&--temp
+				.product-feature-item-icon
+					background-image url("../svg/v7.svg")
+					background-size 21px 46px
+					
+			&--alc
+				.product-feature-item-icon
+					background-image url("../svg/v8.svg")
+					background-size 22px 67px
+					
+		&.animated
+			.product-features-items
+				opacity 1
+				transform translateX(0)
+					
+	.product-rewards
+		padding 25px 70px 60px 70px
+		
+		background-color #BAA079
+		
+		&.animated
+			.product-rewards-title
+			.product-rewards-items
+				opacity 1
+				
+				transform translateY(0)
+				
+		.product-rewards-items
+			opacity 0
+			
+			transform translateY(10px)
+			
+			transition .3s opacity $transitionAnimation, .3s transform $transitionAnimation
+
+		.product-rewards-title
+			margin-bottom 20px
+
+			font-family "ElizabethItalic"
+			font-size 44px
+			line-height 54px
+			color #4A4A4A
+			
+			opacity 0
+			
+			transform translateY(10px)
+			
+			transition .3s opacity $transitionAnimation, .3s transform $transitionAnimation
+			
+		.product-reward-item
+			margin-bottom 45px
+			
+			overflow hidden
+			
+			&:last-child
+				margin-bottom 0
+				
+			.product-reward-item-photo-holder
+				float left
+				
+				max-width 100px
+				max-height 100px
+				
+				img
+					margin 0 auto
+
+					display block
+					width auto
+					max-width 100%
+					height auto
+					max-height 100%
+			
+			.product-reward-item-info
+				padding-left 115px
+				
+				.product-reward-item-title
+					font-size 16px
+					line-height 32px
+					color #333333
+					letter-spacing 2px
+					text-transform uppercase
+				
+				.product-reward-item-text
+					font-size 16px
+					color #333333
+					line-height 28px
+/*** //Product ***/
+
+
+
+/*** Terr ***/
+.terr
+	padding 200px 0 300px 0
+	overflow hidden
+
+	background url("../dummy/terr.png") no-repeat right center
+	background-size cover
+
+	.terr-title
+		font-family "ElizabethItalic"
+		font-size 44px
+		color #4A4A4A
+		line-height 54px
+/*** //Terr ***/
+
+
+
+/*** About ***/
+.about-block
+	position relative
+	
+	overflow hidden
+	padding 80px 0
+	
+	> .page-inner
+		position relative
+		z-index 20
+
+	.about-block-img
+		position absolute
+		left 0
+		top 0
+		z-index 10
+
+		display block
+		width 100%
+		height 100%
+		
+		object-fit cover
+		
+	.about-block-info
+		width 30%
+		max-width 400px
+
+		&--left
+			float left
+			
+		&--right
+			float right
+
+		.about-block-info-item
+			padding 50px 20px
+
+			text-align center
+			
+			transition .5s transform $transitionAnimation, .5s opacity $transitionAnimation
+			
+			.about-block-info-title
+				font-family "Elizabeth"
+				font-size 60px
+				line-height 1
+				letter-spacing -2px
+
+			.about-block-info-descrition
+				font-size 20px
+				line-height 32px
+				
+			&--orange
+				background-color #BAA079
+				
+				.about-block-info-descrition
+					color #FFF
+					
+				.about-block-info-title
+					color #FFF
+					
+			&--white
+				background-color #FFF
+				
+				.about-block-info-title
+					color #4A4A4A
+				
+				.about-block-info-descrition
+					color #4A4A4A
+					
+			&:nth-child(1)
+				transform translateY(-20px)
+				
+			&:nth-child(2)
+				transform translateY(20px)
+					
+	&.animated
+		.about-block-info
+			.about-block-info-item
+					transform translateY(0)
+					opacity 1
+					
+.video
+	margin-top 15px
+
+	padding-top 35px
+	overflow hidden
+	
+	.video-inner
+		position relative
+
+	.video-title
+		position relative
+		z-index 20
+
+		box-sizing border-box
+		padding 80px 30% 0 0
+
+		font-family "ElizabethItalic"
+		font-size 44px
+		line-height 54px
+		color #4A4A4A
+		
+	.video-open-holder
+		position relative
+		z-index 10
+		float right
+		margin-right -30%
+		
+		display block
+		width 55%
+
+	.video-open
+		position relative
+		left -55%
+		
+		display block
+		
+		background url("../dummy/video.png") no-repeat center center
+		background-size cover
+		
+		text-decoration none
+		
+		&:before
+			content ""
+			
+			display block
+			padding-top 80%
+			
+	.video-open-fake
+		position absolute
+		right 0
+		top 0
+		z-index 30
+
+		display block
+		width 55%
+		
+		&:before
+			content ""
+			
+			display block
+			padding-top 80%
+			
+		.video-open-icon
+			position absolute
+			left 50%
+			top 50%
+			transform translate(-50%, -50%)
+
+			width 80px
+			height 80px
+			
+			border-radius 50%
+			background-color rgba(255, 255, 255, 0.75)
+			
+			line-height 76px
+			text-align center
+			
+			transition .3s background-color $transitionAnimation
+			
+			.video-open-icon-inner
+				position relative
+				left 5px
+				vertical-align middle
+				margin 0 auto
+
+				display inline-block
+				width 42px
+				height 47px
+				
+				svg
+					display block
+					max-width 100%
+					height auto
+					
+					path
+						stroke #BAA079
+						
+						transition .3s stroke $transitionAnimation
+			
+		&:hover
+			.video-open-icon
+				background-color #FFF
+				
+				.video-open-icon-inner
+					svg
+						path
+							stroke #4A4A4A
+			
+.map
+	padding 100px 0
+
+	background url("../dummy/map.png") no-repeat right center
+	
+	.map-info
+		box-sizing border-box
+		width 25%
+		padding 40px 30px
+		
+		background-color #FFF
+		
+		.map-info-title
+			margin-bottom 15px
+
+			font-family "Elizabeth"
+			font-size 24px
+			line-height 28px
+			text-align center
+			color #4A4A4A
+/*** //About ***/
+
+
+
+/*** Buy ***/
+.city-holder
+	padding 70px 0 35px 0
+	
+	.city-title
+		margin-bottom 20px
+
+		font-size 16px
+		color #4A4A4A
+		line-height 32px
+		letter-spacing 2px
+		text-transform uppercase
+		
+.places
+	td
+		&:nth-child(1)
+			width 30%
+			
+		&:nth-child(2)
+			width 30%
+			
+		&:nth-child(3)
+			width 40%
+			
+.city-content
+	transition .3s opacity $transitionAnimation
+	
+	&.loading
+		opacity 0
+/*** //Buy ***/
+
+
+
+/*** Popup ***/
+.mfp-bg
+	background-color rgba(0, 0, 0, 0.48)
+
+.mfp-fade.mfp-bg
+	opacity 0
+
+	transition all .3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
+	
+	&.mfp-ready
+		opacity 0.5
+		
+	&.mfp-removing
+		opacity 0
+
+.mfp-fade.mfp-wrap
+	.mfp-content
+		opacity 0
+		
+		transform translateY(-20px)
+		
+		transition all .3s cubic-bezier(0.250, 0.460, 0.450, 0.940)
+
+	&.mfp-ready
+		.mfp-content
+			opacity 1
+			
+			transform translateY(0)
+
+	&.mfp-removing
+		.mfp-content
+			opacity 0
+			
+			transform translateY(-20px)
+/*** //Popup ***/
+
 
 
 /*** Preloader ***/
@@ -1144,6 +3286,19 @@ img
 			opacity 0
 
 			transition-delay 0s
+			
+.page-simple
+.page-bg
+.page-product
+.page-catalog
+.page-intro
+	.page-preloader
+		&.disabled
+			.page-preloader-logo
+				opacity 0
+				transform translateY(-50%)
+
+				transition-delay 0s
 
 @keyframes spin
 	0%
@@ -1158,6 +3313,10 @@ img
 
 
 /*** Animation ***/
+@keyframes load
+	100%
+		transform rotate(-360deg)
+
 [data-animationtype=fadeIn]
 	opacity 0
 
@@ -1270,3 +3429,5 @@ img
 
 			transform translateY(0)
 /*** //Animation ***/
+
+

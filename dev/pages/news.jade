@@ -1,11 +1,12 @@
 extends ../templates/base
 
 block content
-	h1(class="h1") Новости
+	div(class="page-heading")
+		h1(class="page-heading-title") Новости
 
-	div(class="news")
-		div(class="page-inner page-inner--w1")
-			div(class="news-items")
+	div(class="news news--list")
+		div(class="page-inner page-inner--w2")
+			div(class="news-items", id="news")
 				a(href="#", class="news-item")
 					div(class="news-item-panel", data-animationtype="slideTop")
 						div(class="news-item-date") 17 августа 2017
@@ -19,5 +20,47 @@ block content
 					div(class="news-item-panel", data-animationtype="slideTop")
 						div(class="news-item-date") 24 мая 2017 
 						div(class="news-item-name") Кубок СВВР в Абрау-Дюрсо: успех ведерниковского Каберне Совиньон 2015
+						div(class="news-item-description") В начале октября, когда уборка урожая на наших виноградниках еще была в самом разгаре, в Абрау-Дюрсо был проведен ежегодный дегустационный конкурс.
+						div(class="news-item-more") далее
 					div(class="news-item-photo-holder")
 						div(class="news-item-photo", style="background-image: url(../dummy/news/2.png)", data-animationtype="zoomIn")
+
+
+				a(href="#", class="news-item")
+					div(class="news-item-panel", data-animationtype="slideTop")
+						div(class="news-item-date") 11 мая 2017
+						div(class="news-item-name") Сезон 2017 года
+						div(class="news-item-description") 10 ноября 2014 года на «Винодельне Ведерниковъ» завершилось алкогольное брожение в крайней емкости с вином из сорта "Каберне Совиньон". 
+						div(class="news-item-more") далее
+					div(class="news-item-photo-holder")
+						div(class="news-item-photo", style="background-image: url(../dummy/news/3.png)", data-animationtype="zoomIn")
+
+				a(href="#", class="news-item")
+					div(class="news-item-panel", data-animationtype="slideTop")
+						div(class="news-item-date") 24 апреля 2017 
+						div(class="news-item-name") Кубок СВВР в Абрау-Дюрсо: успех ведерниковского Каберне Совиньон 2012
+						div(class="news-item-description") Первое документальное свидетельство присутствия Красностопа в окрестностях хутора Ведерников датировано 1814 годом. Таким образом, данный сорт непрерывно растет здесь как минимум 200 лет. 
+					div(class="news-item-photo-holder")
+						div(class="news-item-photo", style="background-image: url(../dummy/news/4.png)", data-animationtype="zoomIn")
+
+
+				a(href="#", class="news-item")
+					div(class="news-item-panel", data-animationtype="slideTop")
+						div(class="news-item-date") 17 апреля 2017
+						div(class="news-item-name") Высокий класс игры в исполнении «Винодельни Ведерниковъ» на «Кубке Союза виноградарей»
+						div(class="news-item-description") В начале октября, когда уборка урожая на наших виноградниках еще была в самом разгаре, в Абрау-Дюрсо был проведен ежегодный дегустационный конкурс.
+						div(class="news-item-more") далее
+					div(class="news-item-photo-holder")
+						div(class="news-item-photo", style="background-image: url(../dummy/news/5.png)", data-animationtype="zoomIn")
+
+				a(href="#", class="news-item")
+					div(class="news-item-panel", data-animationtype="slideTop")
+						div(class="news-item-date") 24 мая 2017 
+						div(class="news-item-name") Утренняя почта
+						div(class="news-item-description") Сегодня к нам в офис пришла приятная посылка - дипломы конкурса International Wine &amp; Spirits Competition 2014, на которым наши вина завоевали три медали! Хотим поделиться с вами нашими позитивными эмоциями и пожелать удачного дня!
+						div(class="news-item-more") далее
+					div(class="news-item-photo-holder")
+						div(class="news-item-photo", style="background-image: url(../dummy/news/6.png)", data-animationtype="zoomIn") 
+
+				div(class="load-more-holder")
+					a(href="#", class="load-more", data-itemsselector=".news-item", data-container="#news")

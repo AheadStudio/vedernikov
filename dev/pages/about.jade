@@ -1,0 +1,91 @@
+extends ../templates/base
+
+block content
+	div(class="intro")
+		div(class="intro-bg", style="background-image: url(../dummy/bgs/about.png)")
+			div(class="page-inner page-inner--w2")
+				div(class="intro-inner")
+					h1(class="intro-title") Винодельня Ведерниковъ
+
+	+menu({
+		rootClass: "page-menu",
+		items: [
+			{
+				name: "История",
+				href: "history.html"
+			}, {
+				name: "Люди",
+				href: "team.html"
+			}, {
+				name: "Технологии",
+				href: "techs.html"
+			}, {
+				name: "Сорта винограда",
+				href: "sorts.html"
+			}, {
+				name: "Награды",
+				href: "quality.html"
+			}
+		]
+	})
+
+	div(class="video")
+		div(class="page-inner page-inner--w2")
+			div(class="video-inner")
+				div(class="video-open-holder")
+					div(class="video-open")
+				div(class="video-title") «Винодельня Ведерниковъ» — один из первопроходцев укрывного виноградарства и премиального виноделия в постсоветской России. Познакомила мир с превосходными тихими винами из донских аборигенных сортов, с незапамятных времён произрастающих в этих краях.
+				a(href="https://www.youtube.com/watch?v=uMKd7ar23yw", class="video-open-fake popup", data-type="iframe")
+					div(class="video-open-icon")
+						span(class="video-open-icon-inner")
+							include ../../prod/svg/play.svg
+
+	div(class="map")
+		div(class="page-inner page-inner--w2")
+			div(class="map-info")
+				div(class="map-info-title") Хутор Ведерников
+				div(class="map-info-text page-text") Хозяйство «Винодельня Ведерниковъ» расположено в Ростовской области в хуторе Ведерников на правом берегу реки Дон. Созданные в русских винодельческих традициях, на донской земле, из местного винограда, вина «Винодельни Ведерниковъ» каждый год получают высокие оценки на престижных международных конкурсах. 
+
+	div(class="image", data-animation="true")
+		div(class="page-inner page-inner--w1")
+			img(src="../dummy/about.png")
+
+	div(class="about-block", data-animation="true")
+		div(class="page-inner page-inner--w2")
+			div(class="about-block-info about-block-info--left")
+				div(class="about-block-info-item about-block-info-item--orange")
+					div(class="about-block-info-title") 40 га
+					div(class="about-block-info-descrition") составляют посадки автохтонных казачьих сортов  
+				div(class="about-block-info-item about-block-info-item--white")
+					div(class="about-block-info-title") 2004
+					div(class="about-block-info-descrition") запущена торговая марка «Винодельня Ведерниковъ» 
+		img(src="../dummy/about/1.png", class="about-block-img")
+	
+	div(class="page-inner page-inner--w2")
+		div(class="techs")
+			div(class="tech-item", data-animation="true")
+				div(class="tech-item-col tech-item-col--w1")
+					div(class="page-text") Авторитетные эксперты отмечают яркую ароматику, сочетающую в себе нотки цветов, фруктов, ягод и степного разнотравья, богатый сбалансированный вкус и замечательное послевкусие, характерные для вин северного региона. Из 160 гектаров виноградников хозяйства 25% составляют посадки автохтонных казачьих сортов, которые бережно сохранили, выкупив в девяностых годах прошлого века полуразрушенный винсовхоз. 
+				div(class="tech-item-col tech-item-col--w3")
+					img(src="../dummy/about/2.png")
+
+	div(class="about-block", data-animation="true")
+		div(class="page-inner page-inner--w2")
+			div(class="about-block-info about-block-info--right")
+				div(class="about-block-info-item about-block-info-item--orange")
+					div(class="about-block-info-title") 40 га
+					div(class="about-block-info-descrition") составляют посадки автохтонных казачьих сортов  
+				div(class="about-block-info-item about-block-info-item--white")
+					div(class="about-block-info-title") 2004
+					div(class="about-block-info-descrition") запущена торговая марка «Винодельня Ведерниковъ» 
+		img(src="../dummy/about/3.png", class="about-block-img")
+
+	div(class="page-inner page-inner--w2")
+		div(class="techs")
+			div(class="tech-item", data-animation="true")
+				div(class="tech-item-col tech-item-col--w1")
+					img(src="../dummy/about/4.png")
+				div(class="tech-item-col tech-item-col--w1")
+					div(class="page-text") C 2004 года хозяйство входит в холдинг вместе с АО «Миллеровский винзавод», которым управляет компания ООО «Донвинпром», и выпускает под торговой маркой «Винодельня Ведерниковъ» премиальные белые и красные сухие вина. С 2015 года холдинг входит в состав Группы компаний «Абрау-Дюрсо».
+				div(class="tech-item-col tech-item-col--w2")
+					img(src="../dummy/about/5.png")

@@ -41,6 +41,8 @@
             "src": "../bower_components/simplestatemanager/dist/ssm.min.js"
         }, {
             "src": "../bower_components/background-check/background-check.js"
+        }, {
+            "src": "../bower_components/sticky-kit/jquery.sticky-kit.js"
         }
     ]
 }

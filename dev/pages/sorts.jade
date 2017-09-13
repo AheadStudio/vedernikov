@@ -2,65 +2,73 @@ extends ../templates/base
 
 block content
 	div(class="page-hero")
-		div(class="page-inner page-inner--w1")
-			if page.breadcrumbs
-				+breadcrumbs({
-					rootClass: "page-breadcrumbs",
-					items: page.breadcrumbs
-				})
-			h1(class="h1") Аборигенные сорта винограда: уникальное мировое достояние
-			img(src="../dummy/bgs/sorts.png", class="page-hero-bg")
+		div(class="page-inner page-inner--w2")
+			div(class="page-hero-inner")
+				if page.breadcrumbs
+					+breadcrumbs({
+						rootClass: "page-breadcrumbs",
+						items: page.breadcrumbs
+					})
+				h1(class="page-hero-title") Аборигенные сорта винограда: уникальное мировое достояние
+		img(src="../dummy/bgs/sorts.png", class="page-hero-bg")
 
-	div(class="page-cite") Аборигенными или автохтонными называют сорта винограда, которые произошли и растут только в данной местности.
+	div(class="page-cite", data-animation="true")
+		div(class="page-inner page-inner--w2")
+			div(class="page-cite-inner") Аборигенными или автохтонными называют сорта винограда, которые произошли и растут только в данной местности.
 
-	div(class="page-description")
-		div(class="page-inner page-inner--w1")
-			div(class="page-text")
-				| Самые большие посадки русских автохтонных сортов находятся в окрестностях хутора Ведерников. Недавние исследования 
-				a(href="#", class="link link--orange") Жозе Вуйамо
-				| , крупнейшего в мире специалиста по ампелографии и одного из авторов фундаментального труда «Wine Grapes», подтвердили, что донские сорта — истинные аборигены и не являются завезенными из Европы или других частей света. Образцы ДНК Красностопа Золотовского, Цимлянского Черного и Сибирькового были проверены по 2 по величине в мире базе данных, содержащих более чем 2 тысяч сортов винограда со всего мира, в результате чего удалось установить, что все три обладают уникальным профилем, не совпадающим ни с какими другими известными сортами на планете. 
+	div(class="page-description", data-animation="true")
+		div(class="page-inner page-inner--w2")
+			div(class="page-description-inner")
+				div(class="page-text")
+					| Самые большие посадки русских автохтонных сортов находятся в окрестностях хутора Ведерников. Недавние исследования 
+					a(href="#", class="link link--orange") Жозе Вуйамо
+					| , крупнейшего в мире специалиста по ампелографии и одного из авторов фундаментального труда «Wine Grapes», подтвердили, что донские сорта — истинные аборигены и не являются завезенными из Европы или других частей света. Образцы ДНК Красностопа Золотовского, Цимлянского Черного и Сибирькового были проверены по 2 по величине в мире базе данных, содержащих более чем 2 тысяч сортов винограда со всего мира, в результате чего удалось установить, что все три обладают уникальным профилем, не совпадающим ни с какими другими известными сортами на планете. 
 
 	div(class="sorts")
-		div(class="sort-item")
+		div(class="sort-item", data-animation="true")
 			div(class="sort-item-inner")
-				div(class="page-inner page-inner--w1")
+				div(class="page-inner page-inner--w2")
 					div(class="sort-item-info")
 						div(class="sort-item-name") Красностоп Золотовский 
 						div(class="sort-item-area") 11,4 га
 						div(class="sort-item-note") В 2017 году вступает в плодоношение молодой участок 3,25 га
-						div(class="sort-item-description") 
+						div(class="sort-item-description") Первое документальное свидетельство присутствия Красностопа в окрестностях хутора Ведерников датировано 1814 годом. Таким образом, данный сорт непрерывно растет здесь как минимум 200 лет.
 						a(href="#", class="btn btn--orange")
 							span Вина из этого сорта винограда
-				img(src="../dummy/sorts/1.png", class="sort-item-bg")
-		div(class="page-description")
-			div(class="page-inner page-inner--w1")
-				div(class="page-text")
-					p Когда именно на Дону появились упомянутые сорта, точно неизвестно, также неясно, являются ли они близкими родственниками, для установления этих обстоятельств потребуются глубокие дорогостоящие исследования. Но, согласно фундаментальному академическому справочнику «Ампелография СССР» издания 1954 года, первое документальное свидетельство присутствия Красностопа в окрестностях хутора Ведерников датировано 1814 годом. Таким образом, данный сорт непрерывно растет здесь как минимум 200 лет. 
+			img(src="../dummy/sorts/1.png", class="sort-item-bg")
+		
+		div(class="page-description", data-animation="true")
+			div(class="page-inner page-inner--w2")
+				div(class="page-description-inner")
+					div(class="page-text")
+						p Когда именно на Дону появились упомянутые сорта, точно неизвестно, также неясно, являются ли они близкими родственниками, для установления этих обстоятельств потребуются глубокие дорогостоящие исследования. Но, согласно фундаментальному академическому справочнику «Ампелография СССР» издания 1954 года, первое документальное свидетельство присутствия Красностопа в окрестностях хутора Ведерников датировано 1814 годом. Таким образом, данный сорт непрерывно растет здесь как минимум 200 лет. 
 
-		div(class="sort-item")
+		div(class="sort-item", data-animation="true")
 			div(class="sort-item-inner")
-				div(class="page-inner page-inner--w1")
+				div(class="page-inner page-inner--w2")
 					div(class="sort-item-info")
 						div(class="sort-item-name") Сибирьковый
 						div(class="sort-item-area") 13,2 га
 						div(class="sort-item-description") В Государственный реестр СССР был внесен в 1959 году. Гроздь средняя, массой около 150 г, цилиндрическая или цилиндроконическая, с одним крылом, среднеплотная. Ножка нрозди легко ломается. 
 						a(href="#", class="btn btn--orange")
 							span Вина из этого сорта винограда
-				img(src="../dummy/sorts/2.png", class="sort-item-bg")
-		div(class="page-description")
-			div(class="page-inner page-inner--w1")
-				div(class="page-text")
-					h2 Корнесобственные посадки
-					p Большая часть виноградников представлена корнесобственными (непривитыми) растениями, что практически не встречается в промышленных посадках на всех континентах (исключение составляет Чили). Это не означает, что на Дону нет филлоксеры, однако, благодаря относительной устойчивости к ней донских сортов, а также специфики укрывного виноградарства, выращивание винограда на собственных корнях представляется возможным. 
+			img(src="../dummy/sorts/2.png", class="sort-item-bg")
+		
+		div(class="page-description", data-animation="true")
+			div(class="page-inner page-inner--w2")
+				div(class="page-description-inner")
+					div(class="page-text")
+						h2 Корнесобственные посадки
+						p Большая часть виноградников представлена корнесобственными (непривитыми) растениями, что практически не встречается в промышленных посадках на всех континентах (исключение составляет Чили). Это не означает, что на Дону нет филлоксеры, однако, благодаря относительной устойчивости к ней донских сортов, а также специфики укрывного виноградарства, выращивание винограда на собственных корнях представляется возможным. 
 
-		div(class="sort-item")
+		div(class="sort-item", data-animation="true")
 			div(class="sort-item-inner")
-				div(class="page-inner page-inner--w1")
+				div(class="page-inner page-inner--w2")
 					div(class="sort-item-info")
 						div(class="sort-item-name") Цимлянский Чёрный 
 						div(class="sort-item-area") 12,2 га
 						div(class="sort-item-description") В Государственный реестр СССР был внесен в 1959 году. Гроздь средняя, массой около 150 г, цилиндрическая или цилиндроконическая, с одним крылом, среднеплотная. Ножка нрозди легко ломается. 
 						a(href="#", class="btn btn--orange")
 							span Вина из этого сорта винограда
-				img(src="../dummy/sorts/3.png", class="sort-item-bg")
+			img(src="../dummy/sorts/3.png", class="sort-item-bg")
 

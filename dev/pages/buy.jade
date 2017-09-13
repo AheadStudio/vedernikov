@@ -1,0 +1,165 @@
+extends ../templates/base
+
+block content
+	div(class="page-hero")
+		div(class="page-inner page-inner--w2")
+			div(class="page-hero-inner")
+				if page.breadcrumbs
+					+breadcrumbs({
+						rootClass: "page-breadcrumbs",
+						items: page.breadcrumbs
+					})
+				h1(class="page-hero-title") Места продаж
+		img(src="../dummy/bgs/buy.png", class="page-hero-bg")
+
+	div(class="page-inner page-inner--w4")
+		div(class="city-holder")
+			div(class="city-title") Выберите Ваш город
+			div(class="city-select-holder")
+				select(class="city-select form-item--select", name="city", id="city")
+					option(value="1") Архангельск
+					option(value="2") Астрахань
+					option(value="3") Алтайск
+					option(value="4") Белогород
+					option(value="5") Волгоград
+					option(value="6") Вологда
+					option(value="7") Витебск
+					option(value="1") Архангельск
+					option(value="2") Астрахань
+					option(value="3") Алтайск
+					option(value="4") Белогород
+					option(value="5") Волгоград
+					option(value="6") Вологда
+					option(value="7") Витебск
+
+		div(class="city-content")
+			div(class="tabs")
+				div(class="tabs-heading")
+					a(href="#shops", class="tab-heading-item active") Магазины
+					a(href="#restaurants", class="tab-heading-item") Рестораны
+					a(href="#hotels", class="tab-heading-item") Отели
+				div(class="tabs-content")
+					div(class="tab-content-item active", id="shops")
+						div(class="page-text")
+							table(class="places")
+								thead
+									tr
+										th Заведение
+										th Метро
+										th Адрес
+								tbody
+									tr
+										td
+											b Бутик «Ле Сомелье»
+										td Смоленская
+										td ул. Смоленская, 5
+
+									tr
+										td
+											b Альта Вина
+										td
+											p Киевская
+											p Университет
+											p г. Дубна
+										td
+											p ул. Большая Дорогомиловская, 10
+											p пр-кт Ленинский, 62/1
+											p пр-кт Боголюбова, 20, OpenWine
+									tr
+										td
+											img(src="../dummy/buy/metro.png")
+										td
+											p Печатники
+											p Текстильщики
+										td
+											p ул. Шоссейная, д. 2Б
+											p МКАД 104-й км., д.6
+											p МО, пос.Томилино, 23-й км Новорязанского шоссе, д.17
+									tr
+										td
+											b Бутик «Ле Сомелье»
+										td Смоленская
+										td ул. Смоленская, 5
+									tr
+										td
+											b Альта Вина
+										td
+											p Киевская
+											p Университет
+											p г. Дубна
+										td
+											p ул. Большая Дорогомиловская, 10
+											p пр-кт Ленинский, 62/1
+											p пр-кт Боголюбова, 20, OpenWine
+
+					div(class="tab-content-item", id="restaurants")
+						div(class="page-text")
+							table(class="places")
+								thead
+									tr
+										th Заведение
+										th Метро
+										th Адрес
+								tbody
+									tr
+										td
+											b Альта Вина
+										td
+											p Киевская
+											p Университет
+											p г. Дубна
+										td
+											p ул. Большая Дорогомиловская, 10
+											p пр-кт Ленинский, 62/1
+											p пр-кт Боголюбова, 20, OpenWine
+									tr
+										td
+											b Бутик «Ле Сомелье»
+										td Смоленская
+										td ул. Смоленская, 5
+									tr
+										td
+											b Альта Вина
+										td
+											p Киевская
+											p Университет
+											p г. Дубна
+										td
+											p ул. Большая Дорогомиловская, 10
+											p пр-кт Ленинский, 62/1
+											p пр-кт Боголюбова, 20, OpenWine
+
+					div(class="tab-content-item", id="hotels")
+						div(class="page-text")
+							table(class="places")
+								thead
+									tr
+										th Заведение
+										th Метро
+										th Адрес
+								tbody
+									tr
+										td
+											b Бутик «Ле Сомелье»
+										td Смоленская
+										td ул. Смоленская, 5
+
+									tr
+										td
+											img(src="../dummy/buy/metro.png")
+										td
+											p Печатники
+											p Текстильщики
+										td
+											p ул. Шоссейная, д. 2Б
+											p МКАД 104-й км., д.6
+											p МО, пос.Томилино, 23-й км Новорязанского шоссе, д.17
+
+
+
+
+
+
+
+
+

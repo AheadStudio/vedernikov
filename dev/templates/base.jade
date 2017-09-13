@@ -50,7 +50,7 @@ html(lang="ru")
 			}
 		])
 
-	body(itemscope, itemtype="http://schema.org/WebPage")
+	body(itemscope, itemtype="http://schema.org/WebPage", class="#{page.bodyClass ? page.bodyClass : ''}")
 		
 		div(class="page-preloader")
 			div(class="page-preloader-logo")
@@ -73,25 +73,25 @@ html(lang="ru")
 
 		footer(class="page-footer", itemscope, itemtype="http://schema.org/WPFooter", data-animationtype="footer")
 			div(class="footer-row footer-row--info")
-				div(class="page-inner page-inner--w1")
+				div(class="page-inner page-inner--w2")
 					+menu({
 						rootClass: "footer-menu",
 						items: [
 							{
 								name: "Терруар",
-								href: "terruar.html"
+								href: "terr.html"
 							}, {
 								name: "О винодельне",
 								href: "about.html"
 							}, {
 								name: "Вино",
-								href: "vine.html"
+								href: "catalog.html"
 							}, {
 								name: "Новости",
 								href: "news.html"
 							}, {
 								name: "Где купить",
-								href: "where.html"
+								href: "buy.html"
 							}, {
 								name: "Контакты",
 								href: "contacts.html"
@@ -120,7 +120,7 @@ html(lang="ru")
 									include ../../prod/svg/vk.svg
 							
 			div(class="footer-row footer-row--black")
-				div(class="page-inner page-inner--w1")
+				div(class="page-inner page-inner--w2")
 					div(class="footer-copyrights") &copy; 2017, Винодельня Ведерников.
 					a(href="http://aheadstudio.ru", target="_blank", class="footer-creators")
 						| Сделано в 
@@ -139,19 +139,19 @@ html(lang="ru")
 					items: [
 						{
 							name: "Терруар",
-							href: "terruar.html"
+							href: "terr.html"
 						}, {
 							name: "О винодельне",
 							href: "about.html"
 						}, {
 							name: "Вино",
-							href: "vine.html"
+							href: "catalog.html"
 						}, {
 							name: "Новости",
 							href: "news.html"
 						}, {
 							name: "Где купить",
-							href: "where.html"
+							href: "buy.html"
 						}, {
 							name: "Контакты",
 							href: "contacts.html"

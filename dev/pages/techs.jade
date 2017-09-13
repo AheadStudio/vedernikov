@@ -2,38 +2,42 @@ extends ../templates/base
 
 block content
 	div(class="page-hero")
-		div(class="page-inner page-inner--w1")
-			if page.breadcrumbs
-				+breadcrumbs({
-					rootClass: "page-breadcrumbs",
-					items: page.breadcrumbs
-				})
-			h1(class="h1") Новейшие технологии виноделия
-			img(src="../dummy/bgs/techs.png", class="page-hero-bg")
+		div(class="page-inner page-inner--w2")
+			div(class="page-hero-inner")
+				if page.breadcrumbs
+					+breadcrumbs({
+						rootClass: "page-breadcrumbs",
+						items: page.breadcrumbs
+					})
+				h1(class="page-hero-title") Новейшие технологии виноделия
+		img(src="../dummy/bgs/techs.png", class="page-hero-bg")
 
-	div(class="page-cite") При производстве вин «Винодельни Ведерниковъ» используется самый актуальный мировой опыт и лучшие энологические средства. 
+	div(class="page-cite", data-animation="true")
+		div(class="page-inner page-inner--w2")
+			div(class="page-cite-inner") При производстве вин «Винодельни Ведерниковъ» используется самый актуальный мировой опыт и лучшие энологические средства. 
 
-	div(class="page-description")
-		div(class="page-inner page-inner--w1")
-			div(class="page-text") Винодельня, построенная в 70-е годы прошлого века для производства массового продукта невысокого качества, с 2007 года постоянно модернизируется. Сегодня основное технологическое оборудование представлено марками европейских производителей, в основном из Франции и Италии. Емкостной парк был серьёзно обновлён в 2016 году и позволяет решать все задачи, возникающие при производстве красных и белых вин.
+	div(class="page-description", data-animation="true")
+		div(class="page-inner page-inner--w2")
+			div(class="page-description-inner")
+				div(class="page-text") Винодельня, построенная в 70-е годы прошлого века для производства массового продукта невысокого качества, с 2007 года постоянно модернизируется. Сегодня основное технологическое оборудование представлено марками европейских производителей, в основном из Франции и Италии. Емкостной парк был серьёзно обновлён в 2016 году и позволяет решать все задачи, возникающие при производстве красных и белых вин.
 
-	div(class="page-inner page-inner--w1")
+	div(class="page-inner page-inner--w2")
 		div(class="techs")
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w1")
 					div(class="page-text") Все сорта винограда убираются вручную, значительная часть убирается в небольшие пластиковые ящики, позволяющие доставить виноград на переработку без повреждений. Корнесобственный виноград, к которому относится большая часть посадок в Ведерникове, сам по себе имеет невысокую урожайность, что благоприятно сказывается на концентрации ценных веществ в ягодах. При необходимости урожайность контролируется агроприёмами (“зеленый сбор” и т.п.)
 				div(class="tech-item-col tech-item-col--w2")
 					img(src="../dummy/techs/1.png")
-				div(class="tech-item-col tech-item-col--w2")
+				div(class="tech-item-col tech-item-col--w1")
 					img(src="../dummy/techs/2.png")
 
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w3")
 					img(src="../dummy/techs/3.png")
 				div(class="tech-item-col tech-item-col--w1")
 					div(class="page-text") Сложная технологическая цепочка, без которой невозможно производство современных премиальных белых вин, начинается с ручной уборки винограда в ящики и его охлаждения в холодильной камере, если того требуют погодные условия. На всех этапах после дробления и до брожения мезга и сусло защищаются от окисления сухим льдом и инертным газом.
 
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w1")
 					img(src="../dummy/techs/4.png")
 				div(class="tech-item-col tech-item-col--w1")
@@ -43,7 +47,7 @@ block content
 				div(class="tech-item-col tech-item-col--w2")
 					img(src="../dummy/techs/5.png")
 
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w2")
 					img(src="../dummy/techs/6.png")
 				div(class="tech-item-col tech-item-col--w1")
@@ -52,7 +56,7 @@ block content
 					div(class="page-text")
 						| Основной технологической процедурой, применяемой для производства красных вин «Винодельни Ведерниковъ», является делестаж — техника, для комфортного использования которой необходимы специализированные ёмкости. В 2015 году были приобретены винификаторы особой конструкции производства Letina (Хорватия); обладателей подобных систем винификации можно пересчитать по пальцам одной руки.
 
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w2")
 					img(src="../dummy/techs/8.png")
 				div(class="tech-item-col tech-item-col--w1")
@@ -61,7 +65,7 @@ block content
 				div(class="tech-item-col tech-item-col--w1")
 					img(src="../dummy/techs/9.png")
 	
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w1")
 					img(src="../dummy/techs/10.png")
 				div(class="tech-item-col tech-item-col--w1")
@@ -69,13 +73,13 @@ block content
 				div(class="tech-item-col tech-item-col--w2")
 					img(src="../dummy/techs/11.png")
 
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w1")
 					img(src="../dummy/techs/12.png")			
 				div(class="tech-item-col tech-item-col--w3")
 					img(src="../dummy/techs/13.png")
 
-			div(class="tech-item")
+			div(class="tech-item", data-animation="true")
 				div(class="tech-item-col tech-item-col--w1")
 					div(class="page-text")
 						cite При производстве вин «Винодельни Ведерниковъ» используется самый актуальный мировой опыт и лучшие энологические средства.

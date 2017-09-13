@@ -1,0 +1,13 @@
+<svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 45.4">
+  <title>v7</title>
+  <g id="Page-1">
+    <g id="_05-Отдельное-вино" data-name="05-Отдельное-вино">
+      <g id="Group-5">
+        <rect id="Rectangle-path" x="13.9" y="5" width="6.1" height="1.1" fill="#baa079"/>
+        <rect id="Rectangle-path-2" data-name="Rectangle-path" x="13.9" y="12.4" width="6.1" height="1.1" fill="#baa079"/>
+        <rect id="Rectangle-path-3" data-name="Rectangle-path" x="13.9" y="19.7" width="6.1" height="1.1" fill="#baa079"/>
+        <path id="Shape" d="M11.9,26V0.5h-2V26A10,10,0,1,0,11.9,26Zm-1,17.9a8,8,0,1,1,8-8A8,8,0,0,1,10.9,43.9Z" transform="translate(-0.9 -0.5)" fill="#baa079"/>
+      </g>
+    </g>
+  </g>
+</svg>

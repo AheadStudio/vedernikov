@@ -279,7 +279,9 @@ gulp.task("upload", function() {
 		user: settings.ftp.login,
 		password: settings.ftp.password,
 		parallel: 10,
-		log: util.log
+		maxConnections: 10,
+		log: util.log,
+		reload: true
 	});
 
 	gulp.src([settings.paths.prod.root + "*", settings.paths.prod.root + "**"], {
